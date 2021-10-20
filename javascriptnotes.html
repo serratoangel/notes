@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Notes</title>
+</head>
+
+<body>
+    <header>
+        <h1>Learning JavaScript</h1>
+        <nav>
+            <a href="#jsintro">JavaScript Introduction</a>
+        </nav>
+    </header>
+    <h2>Document.write</h2>
+    <!-- <script>
+        document.write("Ejemplo de document.write"); /* Dentro del objeto document llamamos al comando write */
+    </script> -->
+    <h2>Variables</h2>
+    <!-- <script>
+        let nombre = "Angel"; /* Así se define una variable en js */
+        let edad = 34;
+        let casado;
+        casado = false;
+        document.write(nombre);
+        document.write("<br>"); /* Salto de página */
+        document.write(edad);
+        document.write("<br>"); /* Salto de página */
+        document.write(casado);
+        document.write("<br>"); /* Salto de página */
+    </script> -->
+    <h2>Valor ingresado por teclado</h2>
+    <!-- <script>
+        let nombre2;
+        let edad2;
+        nombre2 = prompt("Ingrese su nombre");
+        edad2 = prompt("Ingrese su edad");
+        document.write("Su nombre es: " + nombre2 + " y su edad es: " + edad2 + " años.");
+    </script> -->
+    <h2>Estructura secuencial</h2>
+    <!-- <script>
+        let valor1 = prompt("Ingrese el primer número: ");
+        let valor2 = prompt("Ingrese el segundo número: ");
+        let suma = parseInt(valor1) + parseInt(valor2);
+        let multiplicar = parseInt(valor1) * parseInt(valor2);
+        document.write(suma);
+        document.write("<br>");
+        document.write(multiplicar);
+    </script> -->
+    <h2>Estructuras condicionales simples</h2>
+    <!-- <script>
+        let nombre = prompt("Ingrese nombre del estudiante");
+        let nota = parseInt(prompt("Ingrese nota del estudiante")); /* parseInt para almacenar de forma entera el valor ingresado por teclado */
+        if (nota >= 4 && nota <= 5) {
+            document.write(nombre + " está aprobado con una nota de: " + nota);
+        } else {
+            document.write(nombre + " no está aprobado.");
+        }
+    </script> -->
+    <h2 id="jsintro">JavaScript W3 Schools</h2>
+    <h3>Method getElementById()</h3>
+    <p>JavaScript admits both double and single quotes.</p>
+    <p id="demo">JavaScript can change HTML content.</p>
+    <button type="button" onclick='document.getElementById("demo").innerHTML = "This is the new content!"'>Click
+        Me!</button>
+    <article>
+        <h3>Change HTMl Attribute Values</h3>
+        <p>In this example JavaScript changes the value of the <code>src</code> attribute of an <code>&lt;img&gt;</code>
+            tag</p>
+        <button onclick="document.getElementById('myImage').src='/images/gpu.png'">GPU</button>
+        <img id="myImage" src="/images/gpu.png" style="width:100px">
+        <button onclick="document.getElementById('myImage').src='/images/motherboard.png'">Motherboard</button>
+    </article>
+    <article>
+        <h3>Change HTML Styles</h3>
+        <p>Is a variant of changing an HTMl attribute</p>
+        <p id="demodos">As soon as you click on the link, this text is going to change</p>
+        <button type="button" onclick="document.getElementById('demodos').style.fontSize='35px'">Click me!</button>
+    </article>
+    <article>
+        <h3>Hide HTML Elements</h3>
+        <p id="demotres">This text is going to hide as soon as you click on the next button.</p>
+        <button type="button" onclick="document.getElementById('demotres').style.display='none'">Hide me!</button>
+    </article>
+    <article>
+        <h3>Show HTML Elements</h3>
+        <p>JavaScript can show hidden HTML Elements.</p>
+        <p id="cosa" style="display: none;">Hola!</p>
+        <button type="button" onclick="document.getElementById('cosa').style.display='block'">Show me!</button>
+    </article>
+    <section>
+        <h2>JavaScript Functions and Events</h2>
+        <p id="iddejs">A paragraph.</p>
+        <button type="button" onclick="myfunction()">Try this!</button>
+        <script>
+            function myfunction() {
+                document.getElementById("iddejs").innerHTML = "Paragraph changed.";
+            }
+        </script>
+    </section>
+    <article>
+        <h2>External JavaScript</h2> <!-- This exercise is linked with the javascript.js file -->
+        <p id="demostracion">El párrafo.</p>
+        <button type="button" onclick="mifuncion()">Probar!</button>
+        <script src="javascript.js"></script>
+        <h3>Advantages.</h3>
+        <p>Placing scripts in external files has some advantages.</p>
+        <ul>
+            <li>It separates HTMl and code</li>
+            <li>It makes HTML and JavaScript easier to read and mantain</li>
+            <li>Cached JavaScript files can speed up page loads</li>
+        </ul>
+        <h3>External references</h3>
+        <p>An External script can be referenced in 3 different ways</p>
+        <ul>
+            <li>With a full URL</li>
+            <p><code>&lt;script src="https://www.w3schools.com/js/myScript.js"&gt;&lt;/script&gt;</code></p>
+            <li>With a file path</li>
+            <p><code>&lt;script src="/js/myScript.js"&gt;&lt;/script&gt;</code></p>
+            <li>Without any path</li>
+            <p><code>&lt;script src="myScript.js"&gt;&lt;/script&gt;</code></p>
+        </ul>
+    </article>
+    <section>
+        <h2>JavaScript Output</h2>
+        <h3>Possibilities</h3>
+        <p>JavaScript can display data in different ways:</p>
+        <ul>
+            <li>Writing into an HTML element, using <code>innerHTML</code></li>
+            <p id="innerhtml"></p>
+            <script>
+                document.getElementById("innerhtml").innerHTML = 2 + 2;
+            </script>
+            <li>Writing into the HTML output using <code>document.write()</code></li>
+            <script>document.write(2 + 3);</script>
+            <p>The <code>document.write()</code> method should onyl be used for testing</p>
+            <p>Using <code>document.write()</code> after an HTML document is loaded, it will delete all existing HTML
+            </p>
+            <button type="button" onclick="document.write(5+5)">Suma y daña toda la página!</button>
+            <li>Writing into an alert box, using <code>window.alert()</code></li>
+            <p>You can use an alert box to display data</p>
+            <script>
+                window.alert(6 + 5);
+            </script>
+            <p>You can also skip the <code>window</code> keyword</p>
+            <script>
+                alert("Hola!");
+            </script>
+            <li>Writing into the browser console using <code>console.log()</code></li>
+            <p>For debugging purposes, you can call the <code>console.log</code> method in the browser to display data
+            </p>
+            <script>
+                console.log(1 + 1);
+            </script>
+        </ul>
+        <h2>JavaScript print</h2>
+        <p>JavaScript doesn't have any print object. The only exception is that you can call the
+            <code>window.print()</code> method in the browser to print the content of the current window
+        </p>
+        <button onclick="window.print()">Print this page</button>
+    </section>
+    <article>
+        <h2>JavaScript Statements</h2>
+        <h3>JavaScript Programs</h3>
+        <p>A javascript program is a list of programming statements</p>
+        <p id="suma"></p>
+        <script>
+            let x, y, z;
+            x = 5;
+            y = 11;
+            z = parseInt(x) + parseInt(y);
+            document.getElementById("suma").innerHTML = "The value of z is= " + z + ".";
+        </script>
+    </article>
+    <section>
+        <h2>JavaScript Syntax</h2>
+        <h3>JavaScript Values</h3>
+        <p>The javascript syntax defines two types of values:</p>
+        <ul>
+            <li>Fixed values, they are also called <b>Literals</b></li>
+            <p>The two most important syntax rules for fixed values are:</p>
+            <ul>
+                <li><b>Numbers</b> are written with or without decimals</li>
+                <li><b>Strings</b> are text, written within double or single quotes</li>
+            </ul>
+            <li>Variable values, they are also called <b>Variables</b></li>
+        </ul>
+        <h3>JavaScript Variables</h3>
+        <p>Variables are used to store data values</p>
+        <p>JavaScript uses the keywords <code>var, let and const</code> to declare variables</p>
+        <h3>Comments</h3>
+        <p>You can add comments with // or /**/</p>
+        <script>
+            /**/
+            //
+        </script>
+        <h3>JavaScript and Camel Case</h3>
+        <p>There are different ways of joining multiple words into one variable name</p>
+        <ul>
+            <li><b>Hyphens</b> are not allowed in javascript: <i>first-name</i></li>
+            <li><b>Underscore</b> <i>first_name</i></li>
+            <li><b>Upper Camel Case</b> <i>FirstName</i></li>
+            <li><b>Lower Camel Case</b> <i>firstName</i></li>
+        </ul>
+    </section>
+    <article>
+        <h2>Creating JavaScript Variables</h2>
+        <h3>Declare and asign a value to a variable</h3>
+        <p><code>var carName = "Volvo";</code></p>
+        <h3>One statement, many variables</h3>
+        <p><code>var person = "Angel", carName = "Volvo", price = 200;</code></p>
+    </article>
+</body>
+
+</html>

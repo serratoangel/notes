@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Notes</title>
+    <style>
+        p.dotted {
+            border-style: dotted;
+        }
+
+        p.dashed {
+            border-style: dashed;
+        }
+
+        p.solid {
+            border-style: solid;
+        }
+
+        p.double {
+            border-style: double;
+        }
+
+        p.groove {
+            border-style: groove;
+        }
+
+        p.ridge {
+            border-style: ridge;
+        }
+
+        p.inset {
+            border-style: inset;
+        }
+
+        p.outset {
+            border-style: outset;
+        }
+
+        p.none {
+            border-style: none;
+        }
+
+        p.hidden {
+            border-style: hidden;
+        }
+
+        p.mix {
+            border-style: dotted dashed solid double;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Notes</h1>
+    <header>
+        <nav>
+            <a href="#intro">CSS Introduction</a>
+            <a href="#syntax">CSS Syntax</a>
+            <a href="#selectors">CSS Selectors</a>
+            <a href="#colors">CSS Colors</a>
+            <a href="#background">CSS Backgrounds</a>
+            <a href="#border">CSS Borders</a>
+        </nav>
+    </header>
+
+    <!-- CSS Introduction -->
+    <section>
+        <h2 id="intro">CSS Introduction</h2>
+        <h3>What is CSS?</h3>
+        <p>CSS is the language we use to style a web page.</p>
+        <ul>
+            <li>Cascading Style Sheets.</li>
+            <li>It describes how HTML elements are to be displayed on screen.</li>
+            <li>It can control the layout of multiple web pages all at once.</li>
+            <li>They are stored in CSS files.</li>
+        </ul>
+        <hr>
+    </section>
+
+    <!-- CSS Syntax -->
+    <section>
+        <h3 id="syntax">CSS Syntax</h3>
+        <p>A CSS rule consists of a selector and a declaration block.</p>
+        <img src="/images/css_selector.gif" alt="CSS Syntax">
+        <ul>
+            <li>The selector points to the html element you want to style.</li>
+            <li>The declaration block contains one or more declarations separated by semicolons <strong
+                    style="font-size: 20px; color: red;">;</strong></li>
+            <li>Each declaration includes a CSS property name and a value, separated by a colon <strong
+                    style="font-size: 20px; color: red;">:</strong></li>
+            <li>Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded bu curly
+                braces <strong style="font-size: 20px; color: red;">{}</strong></li>
+        </ul>
+        <hr>
+    </section>
+
+    <!-- CSS Selectors -->
+    <section>
+        <h3 id="selectors">CSS Selectors</h3>
+        <p>CSS Selectors are used to find or select the html elements you want to style.</p>
+        <p>There are five categories.</p>
+        <ul>
+            <li>CSS element selector</li>
+            <li>CSS id selector</li>
+            <li>CSS class selector</li>
+            <li>CSS universal selector</li>
+            <li>CSS grouping selector</li>
+        </ul>
+        <h3>CSS element selector</h3>
+        <p>This selects html elements based on the element name, for example: <code>p, h1, h2,</code></p>
+        <h3>CSS id selector</h3>
+        <p>This uses the id attribute of an html element to select a specific element, for example:
+            <code>CSS - #class1 &#123;&#125;, HTML - &lt;p id="class1"&gt;</code>
+        </p>
+        <h3>CSS class selector</h3>
+        <p>This selects html elements with a specific class attribute, for example:
+            <code>CSS - .center &#123;&#125;, HTML - &lt;p class="center"&gt;</code>
+        </p>
+        <p>You can only specify that only specific html elements should be affected by a class, for example:
+            <code>CSS - p.center &#123;&#125;, HTML - &lt;p class="center"&gt;</code>
+        </p>
+        <q style="color: lightsalmon;">Solo los párrafos con la clase center serán afectados por ese código en CSS.</q>
+        <p>HTML elements can also refer to more than one class, for example:
+            <code>CSS - p.center &#123;&#125; p.large &#123;&#125;, HTML - &lt;p class="center large"&gt;</code>
+        </p>
+        <h3>CSS universal selector</h3>
+        <p>It selects all html elements on the page, for examlple: <code>CSS - * &#123;&#125;</code></p>
+        <h3>CSS grouping selector</h3>
+        <p>It selects all the html elements with the same style definitions, for example:
+            <code>CSS - p, h1, h2 &#123;&#125;</code>
+        </p>
+        <hr>
+    </section>
+
+    <!-- CSS How to add -->
+    <section>
+        <h2>How to add CSS</h2>
+        <h3>Insert CSS</h3>
+        <p>There are three ways to insert CSS</p>
+        <ul>
+            <li>External CSS</li>
+            <p>External styles are defined within the <code>link</code> element, inside the <code>head</code> section of
+                an HTML page.</p>
+            <p><code>&lt;link rel="stylesheet" href="mystyle.css"&gt;</code></p>
+            <li>Internal CSS</li>
+            <p>Internal styles are defined whitin the <code>style</code> element, inside the <code>head</code> section
+                of an HTML page.</p>
+            <p><code>&lt;style&gt; &lt;/style&gt;</code></p>
+            <li>Inline CSS</li>
+            <p>Inline styles are defined whitin the <code>style</code> attribute of the relevant element.</p>
+            <p><code>&lt;h1 style="color:blue;text-align:center;"&gt;This is a heading&lt;/h1&gt;</code></p>
+        </ul>
+        <h3>Cascading order</h3>
+        <p>Si hay mas de un estilo especificado se sigue este orden de prioridad:</p>
+        <ol>
+            <li>Inline style (dentro del elemento html)</li>
+            <li>External and Internal style sheets</li>
+            <li>Browser default</li>
+        </ol>
+        <hr>
+    </section>
+
+    <!-- CSS Colors -->
+    <section>
+        <h2 id="colors">CSS Colors</h2>
+        <h3>CSS Properties</h3>
+        <p>List:</p>
+        <ul>
+            <li><code>&lt;h1 style="background-color:DodgerBlue;"&gt;</code> Color de fondo</li>
+            <li><code>&lt;h1 style="color:Tomato;"&gt;</code> Color del texto</li>
+            <li><code>&lt;h1 style="border:2px solid Tomato;"&gt;</code> Color del borde</li>
+            <li><code>&lt;h1 style="border:2px solid Tomato;"&gt;</code> Color del borde</li>
+            <li><code>opacity: 0.3;</code> Opacidad</li>
+        </ul>
+    </section>
+
+    <!-- CSS Backgrounds -->
+    <section>
+        <h2 id="background">CSS Backgrounds</h2>
+        <h3>Background Color</h3>
+        <p>Color de fondo de un elemento.</p>
+        <p><code>background-color: lightblue;</code></p>
+        <h3>Background Image</h3>
+        <p>Imagen como fondo de un elemento.</p>
+        <p><code>background-image: url("paper.gif");</code></p>
+        <h3>Background Repeat</h3>
+        <p>Por defecto las imagenes se repiten horizontal y verticalmente. Algunas deben repetirse horizontal o
+            verticalmente para que se vean bien.</p>
+        <p><code>background-image: url("gradient_bg.png");<br>background-repeat: repeat-x;</code></p>
+        <p>O que no se repita.</p>
+        <p><code>background-repeat: no-repeat;</code></p>
+        <p>Y también la posición.</p>
+        <p><code>background-position: right top;</code></p>
+        <h3>Background Attachment</h3>
+        <p>Esta propiedad especifíca si la imagen debe desplazarse o quedarse fija.</p>
+        <p><code>background-attachment: fixed;</code> Se queda fija</p>
+        <p><code>background-attachment: scroll;</code> Se desplaza</p>
+        <h3>Background Position</h3>
+        <p>La posición.</p>
+        <p><code>background-position: right top;</code></p>
+        <h3>Background shorthand property</h3>
+        <p>Resumir el código en una sola línea.</p>
+        <p>Cuando se usa la propiedad background el orden de los valores debe ser el siguiente:</p>
+        <ol>
+            <li><code>background-color</code></li>
+            <li><code>background-image</code></li>
+            <li><code>background-repeat</code></li>
+            <li><code>background-attachment</code></li>
+            <li><code>background-position</code></li>
+        </ol>
+    </section>
+
+    <!-- CSS Borders -->
+    <section>
+        <h2 id="border">CSS Borders</h2>
+        <h3>CSS Border Style</h3>
+        <p>The <code>border-style</code> property specifies what kind of border to display.</p>
+        <p class="dotted">A dotted border.</p>
+        <p class="dashed">A dashed border.</p>
+        <p class="solid">A solid border.</p>
+        <p class="double">A double border.</p>
+        <p class="groove">A groove border.</p>
+        <p class="ridge">A ridge border.</p>
+        <p class="inset">An inset border.</p>
+        <p class="outset">An outset border.</p>
+        <p class="none">No border.</p>
+        <p class="hidden">A hidden border.</p>
+        <p class="mix">A mixed border.</p>
+    </section>
+</body>
+
+</html>

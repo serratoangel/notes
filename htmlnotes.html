@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+Alt + Shift + f = acomoda la indentacion del codigo 
+Ctrl + Shift + k = elimina línea de código 
+f1 = abre la paleta de comandos 
+Ctrl + Shift + p = abre la paleta de comandos 
+Ctrl + k then s = guarda todos los archivos 
+Ctrl + p = Search files by name
+Ctrl + Shift + e = Abre el explorador de archivos
+Ctrl + b = abre y cierra el panel izquierdo
+Shift + Alt + Down = Duplica la línea hacia abajo
+Shift + Alt + Up = Duplica la línea hacia arriba
+Ctrl + Alt + Down = Duplica el cursor que titila hacia abajo
+Ctrl + Alt + Up = Duplica el cursor que titila hacia arriba
+El selector de clases es punto . Ejemplo p.center or .center
+El selector de ID es # Ejemplo #container
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>HTML Notes</title>
+    <!-- This style for educational purposes -->
+    <style>
+        /* a:link {
+            color: green;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+
+        a:visited {
+            color: pink;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: red;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: yellow;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        a:link,
+        a:visited {
+            background-color: #f44336;
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        a:hover,
+        a:active {
+            background-color: red;
+        } */
+        #tablauno {
+            border: 1px solid black;
+        }
+
+        #tablados {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        #tablatres {
+            border: 1px solid white;
+            border-collapse: collapse;
+            background-color: #96D4D4;
+        }
+
+        #tablacuatro {
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+
+        .tablacinco {
+            border-style: solid;
+            border-color: #96D4D4;
+        }
+
+        /* @import url('https://fonts.googleapis.com/css2?family=Yaldevi&display=swap'); */
+    </style>
+    <!-- This is style for educational purposes -->
+</head>
+
+<body>
+    <h1
+        style="background-color: black; color: white; text-align: center; border-width: 10px; border-style: solid; border-radius: 10px; border-color: red;">
+        HTML W3Schools</h1>
+    <header>
+        <nav>
+            <a href="#htmlintroduction">HTML Introduction</a> |
+            <!-- enlace dentro del mismo html -->
+            <a href="#htmlattributes">HTML Attributes</a> |
+            <a href="#htmlheadings">HTML Headings</a> |
+            <a href="#htmlparagraphs">HTML Paragraphs</a> |
+            <a href="#htmlstyles">HTML Styles</a> |
+            <a href="#htmlformat">HTML Formatting</a> |
+            <a href="#htmlquotes">HTML Quotation</a> |
+            <a href="#htmlcolors">HTML Colors</a> |
+            <a href="#htmlrgb">HTML RGB and RGBA Colors</a> |
+            <a href="#htmlcss">HTML CSS</a> |
+            <a href="#htmlcsscolors">HTML CSS Colors Font and Sizes</a> |
+            <a href="#htmllinks">HTML Links</a> |
+            <a href="#htmllinkscolors">HTML Links - Different Colors</a> |
+            <a href="#htmlbookmarks">HTML Links - Bookmarks</a> |
+            <a href="#htmlimages">HTML Images</a> |
+            <a href="#htmlimagemaps">HTML Image Maps</a> |
+            <a href="#htmlbackground">HTML Background Images</a> |
+            <a href="#htmltables">HTML Tables</a> |
+            <a href="#tablesizes">HTML Tables Sizes</a> |
+            <a href="#tableheader">HTML Tables Headers</a> |
+            <a href="#lists">HTML Lists</a> |
+            <a href="#inline">HTML Block and Inline Elements</a> |
+            <a href="#class">HTML Class Attribute</a> |
+            <a href="#idatt">HTML ID Attribute</a> |
+            <a href="#iframe">HTML Iframes</a> |
+            <a href="#layout">HTML Layout</a> |
+        </nav>
+    </header>
+
+    <!-- Intro -->
+    <section>
+        <h2 id="htmlintroduction">HTML Introduction</h2> <!-- el enlace llega aquí y se llama con ID -->
+        <h3>What is HTML?</h3>
+        <ul>
+            <li>Hyper Text Markup Language</li>
+            <li>Is the standard for creating web pages</li>
+            <li>Describes the structure of a web page</li>
+            <li>Consists of a series of elements</li>
+            <li>Those elements tell the browser how to display the content</li>
+            <li>Elements label pieces of content such as "this is a heading"."this is a link"</li>
+        </ul>
+        <h3>A simple HTML document explained</h3>
+        <ul>
+            <li>The <code>&lt;!DOCTYPE html&gt;</code> defines that this document is an HTML5 document, it must only
+                appear
+                one at the top of the page</li>
+            <li>The <code>&lt;html&gt;</code> element is the root element of an HTMl page</li>
+            <li>The <code>&lt;head&gt;</code> element contains meta information about the HTML page</li>
+            <li>The <code>&lt;title&gt;</code> element specifies a title for the HTML page, which is shown
+                in the browser's title bar</li>
+            <li>The <code>&lt;body&gt;</code> element defines the documen'ts body, and is a container for all the
+                visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc</li>
+            <li>The <code>&lt;h1&gt;</code> element defines a large heading</li>
+            <li>The <code>&lt;p&gt;</code> element defines a paragraph</li>
+        </ul>
+        <h3>What is an HTML element?</h3>
+        <p>An HTML element is defined by a start tag, some content, and an end tag</p>
+        <code>&lt;tagname&gt;</code> Content goes here <code>&lt;/tagname&gt;</code>
+        <h3>Web browsers</h3>
+        <p>The purpose of a web browser is to read HTML elements and display them correctly</p>
+        <h3>Empty HTML elements</h3>
+        <p>HTML elements with no content are called empty elements</p>
+        <ul>
+            <li><em>br</em> This tag defines a line break, and is an empty element without a closing tag</li>
+            <p>This is paragraph <br> with line breaks</br></p>
+            <li><em>hr</em> This tag defines a thematic change in the context</li>
+        </ul>
+        <hr>
+    </section>
+
+    <!-- Attributes -->
+    <section>
+        <h2 id="htmlattributes">HMTL Attributes</h2>
+        <h3>What is an Attribute?</h3>
+        <p>Attributes provide additional information about HTML elements</p>
+        <ul>
+            <li>All HTMl elements can have attributes</li>
+            <li>They provide additional information about elements</li>
+            <li>They are always specified in the start tag</li>
+            <li>Usually come like this: <b>name</b> = <b>"value"</b></li>
+        </ul>
+        <h3>The href attribute</h3>
+        <p>The <code>&lt;a&gt;</code> tag defines an hyperlink. The <code>&lt;href&gt;</code> attribute specifies the
+            URL of
+            the page the link goes to</p>
+        <h3>The src attribute</h3>
+        <p>The <code>&lt;img&gt;</code> tag is used to embed an image in an HTML page. The <code>&lt;src&gt;</code>
+            attribute specifies the path to the image to be displayed</p>
+        <p>There are two ways to specify the URL in the src attribute:</p>
+        <ol>
+            <li><b>Absolute URL</b>: Links to an external image that is hosted on another website. For example:
+                src = "https://www.w3schools.com/images/img_girl.jpg"</li>
+            <p><b>Note:</b> Those images might be under copyright.</p>
+            <li><b>Relative URL</b>: Links to an image that is hosted within the website. For example:
+                src = "/images/img_girl.jpg"</li>
+            <p><b>Tip:</b> It is almost always best to use Relative URLs. They will not break if you change the domain
+            </p>
+        </ol>
+        <h3>The width and height attributes</h3>
+        <p>The <code>&lt;img&gt;</code> should also contain the width and height attributes, which specifies the width
+            and
+            height of the image (in pixels)</p>
+        <h3>The alt attribute</h3>
+        <p>The required <code>&lt;alt&gt;</code> attribute for the <code>&lt;img&gt;</code> tag specifies an alternate
+            text
+            of an image, if the image for some reason cannot be displayed. This can be due to slow connection</p>
+        <h3>The style attribute</h3>
+        <p>The <code>&lt;style&gt;</code> attribute is used to add styles to an element, such as color, font, size and
+            more
+        </p>
+        <h3>The lang attribute</h3>
+        <p>You should always include the <code>lang</code> attribute inside the <code>&lt;html&gt;</code> tag, to
+            declare
+            the language of the web page. This is meant to assist search engines and browsers</p>
+        <p>Contries can also be added to the language code in the <code>lang</code> attribute</p>
+        <h3>The title attribute</h3>
+        <p>The <code>title</code> attribute defines some extra information about an element and it will be displayed as
+            a
+            tooltip when you mouse over the element. For instance:</p>
+        <p title="I'm a tooltip">This is a paragraph</p>
+        <h3>Tips</h3>
+        <ul>
+            <li>Always use lowercase attributes</li>
+            <li>Always quote attribute values</li>
+        </ul>
+        <hr>
+    </section>
+
+    <!-- Headings -->
+    <section>
+        <h2 id="htmlheadings">HTML Headings</h2>
+        <h3>HTML headings</h3>
+        <p>Headings are important, search engines use the headings to index the structure and content of your web pages
+        </p>
+        <ul>
+            <li><em>h1</em> defines the most important heading</li>
+            <p>If you want bigger headings you can use the <em>style</em> attribute</p>
+            <h1 style="font-size:60px;">Título con tamaño de fuente 60px</h1>
+            <li>h2</li>
+            <li>h3</li>
+            <li>h4</li>
+            <li>h5</li>
+            <li><em>h6</em> defines the least important heading</li>
+        </ul>
+        <hr>
+    </section>
+
+    <!-- Paragraphs -->
+    <section>
+        <h2 id="htmlparagraphs">HTML Paragraphs</h2>
+        <h3>HTML Paragaphs</h3>
+        <p><em>hr</em> We use it to define thematic changes in the context </p>
+        <hr>
+        <p>The element <em>br</em> defines a line break</p>
+        <p>The <code>&lt;pre&gt;</code> element defines preformatted text</p>
+        <pre>Text in a pre element is displayed
+      in a fixed width font, and it preserves both                 spaces and line breaks</pre>
+        <hr>
+    </section>
+
+    <!-- Styles -->
+    <section>
+        <h2 id="htmlstyles">HTML Style</h2>
+        <h3>HTML Styles</h3>
+        <p>The <code>&lt;style&gt;</code> attribute is used to add styles to an element, such as color, font, size and
+            more
+        </p>
+        <p>I am normal</p>
+        <p style="color:red;">I am red</p>
+        <p style="color:blue;">I am blue</p>
+        <p style="font-size:30px">I am bigger than you guys!</p>
+        <h3>Background color</h3>
+        <p>The CSS <code>background-color</code> property defines color for an HTML element</p>
+        <p style="background-color:grey;">Background Color</p>
+        <h3>Text color</h3>
+        <p>The CSS <code>color</code> property defines the text color for an HTML element</p>
+        <p style="color:grey;">Color</p>
+        <h3>Fonts</h3>
+        <p>The CSS <code>font-family</code> property defines the font to be used for an HTMl element</p>
+        <p>Example: <code>font-family: FAMILY-NAME; GENEREIC-NAME;</code></p>
+        <P>The generic name is optional and is a fallback font in case the other specified font is not available</P>
+        <p style="font-family: Georgia, 'Times New Roman', Times, serif; color: tomato;">Sushi</p>
+        <h3>Text size</h3>
+        <p>The CSS <code>font-size</code> property defines the text size for an HTML element</p>
+        <p style="font-size: 200%;">doscientos por ciento</p>
+        <h3>Text alingment</h3>
+        <p>The CSS <code>text-align</code> property defines the horizontal text alingment for an HTML element</p>
+        <p style="text-align: center;">Texto centrado</p>
+        <hr>
+    </section>
+
+    <!-- HTML Formatting -->
+    <section>
+        <h2 id="htmlformat">HTML Formatting</h2>
+        <h3>HTML text formatting</h3>
+        <p>Formatting elements were designed to display special types of text</p>
+        <ul>
+            <li><code style="font-size: 20px;">&lt;b&gt;</code> Bold text</li>
+            <li><code style="font-size: 20px;">&lt;strong&gt;</code> Important text</li>
+            <li><code style="font-size: 20px;">&lt;i&gt;</code> Italic text</li>
+            <li><code style="font-size: 20px;">&lt;em&gt;</code> Emphasized text</li>
+            <li><code style="font-size: 20px;">&lt;mark&gt;</code> Marked text</li>
+            <li><code style="font-size: 20px;">&lt;small&gt;</code> Smaller text</li>
+            <li><code style="font-size: 20px;">&lt;del&gt;</code> Deleted text</li>
+            <li><code style="font-size: 20px;">&lt;ins&gt;</code> Inserted text</li>
+            <li><code style="font-size: 20px;">&lt;sub&gt;</code> Subscript text</li>
+            <li><code style="font-size: 20px;">&lt;sup&gt;</code> Superscript text</li>
+        </ul>
+        <hr>
+    </section>
+
+    <!-- HTML quotation -->
+    <section>
+        <h2 id="htmlquotes">HTML quotation and citation elements</h2>
+        <h3>HTML <code>&lt;blockquote&gt;</code> for quotations</h3>
+        <p>The HTMl <code>&lt;blockquote&gt;</code> element defines a section that is quoted from another source</p>
+        <p>Quote:</p>
+        <blockquote cite="www.google.com">A journey of a thousand miles begins with a single step</blockquote>
+        <h3>HTML <code>&lt;q&gt;</code> for </h3>
+        <p>The HTMl <code>&lt;q&gt;</code> tag defines a short quotation</p>
+        <p>Browsers normally insert quotation marks around the quotation</p>
+        <p>Hola <q>aca va la quotation</q> y ya</p>
+        <h3>HTML abbr for abbreviations</h3>
+        <p>The <abbr title="As soon as possible">ASAP</abbr> es una cosa rara</p>
+        <p><em>abbr</em> defines an abbreaviation or an acronym</p>
+        <h3>Address for contact information</h3>
+        <p><em>address</em> defines the contact information of the author of a document or an article</p>
+        <p>This is the address where you can find me:
+        <address>Calle 59 Sur # 100 - 100</address>
+        </p>
+        <h3>Cite for work title</h3>
+        <p><em>cite</em> defines the title of a creative work</p>
+        <p><cite>The scream</cite> by Angel Serrato. Painted in 2021</p>
+        <h3>The <code>bdo</code> for Bi-Directional Override</h3>
+        <p>El siguiente texto estará escrito de atrás para adelante</p>
+        <bdo dir="rtl">Hola como estan yo me llamo pedro</bdo>
+        <hr>
+    </section>
+
+    <!-- Colors -->
+    <section>
+        <h2 id="htmlcolors">HTML Colors</h2>
+        <h3>Background color</h3>
+        <h4 style="background-color: tomato;">Hey there!</h4>
+        <p style="background-color: turquoise;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam optio
+            fugiat
+            quae facere numquam veritatis quibusdam, est non magnam alias voluptates aspernatur ratione sint placeat
+            repellat
+            libero nam culpa suscipit!</p>
+        <h3>Text Color</h3>
+        <p style="background-color: violet;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem, qui?
+            Deleniti excepturi tempora enim fugiat, animi velit ipsa quod officiis explicabo neque aspernatur illum
+            consequatur culpa? Eum itaque id pariatur?</p>
+        <h3>Border Color</h3>
+        <p style="border: 2px solid tomato;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt
+            necessitatibus aliquam dolore repudiandae sapiente, ullam officiis ab ipsa debitis, at minus voluptatem vel
+            neque
+            nostrum in consequuntur illum mollitia sequi.</p>
+        <hr>
+    </section>
+
+    <!-- Color values -->
+    <section>
+        <h2 id="htmlrgb">HTML RGB and RGBA colors</h2>
+        <!-- Tener en cuenta el orden del borde de acuerdo con el color de fondo para que quede bien -->
+        <h2>RGB Color Values</h2>
+        <p>Each parameter defines the intensity of the color with a value between 0 and 255.</p>
+        <p>This means that there are 256 * 256 * 256 = 16777216 possible colors</p>
+        <p style="background-color: rgb(255, 99, 71);">Color rgb(255, 99, 71) rgb(red, green, blue)</p>
+        <h2>RGBA Color Values</h2>
+        <p>The alpha channel specifies the opacity for a color</p>
+        <p>The alpha parameter is a number between 0.0(fully transparent) and 1.0(not transparent at all)</p>
+        <p style="background-color: RGBA(255, 99, 71, 0.6);">Color rgba(255, 99, 71) rgba(red, green, blue, alpha)</p>
+        <h2>HEX Color Values</h2>
+        <p>In HTML, a color can be specified using a hexadecimal value in the form: #RRGGBB, RR red, GG green, BB blue
+        </p>
+        <p>Those values are between 00 and FF</p>
+        <p>The highest value is FF, if you want to display black set all color parameters to 00 and if you want
+            to display white set all color parameters to FF
+        </p>
+        <p style="background-color: #ff6347;">Color #ff6347</p>
+        <h3>HSL and HSLA Colors</h3>
+        <p>HSL stand for hue, saturation and lightness</p>
+        <ul>
+            <li>Hue is a degree on the color wheel from 0 to 360. 0 is red, 120 is green, and 240 is blue</li>
+            <li>Saturation is a percentage value, 0% means a shade of gray, 100% is the full color</li>
+            <li>Lightness is also a percentage value, 0% is black, and 100% is white</li>
+        </ul>
+        <p style="background-color: hsl(9, 100%, 64%);">hsl(9, 100%, 64%)</p>
+        <h3>HSLA Colors</h3>
+        <p>The HSLA are an extension of HSL with Alpha Channel</p>
+        <p>HSLA colors values are an extesion of HSL colors values with an alpha channel-which specifies the opacity of
+            a
+            color</p>
+        <p style="background-color: hsla(9, 100%, 64%, 0.6);">hsla(9, 100%, 64%, 0.6)</p>
+    </section>
+
+    <!-- HTML CSS -->
+    <section>
+        <h2 id="htmlcss">HTML CSS</h2>
+        <h3>What is CSS?</h3>
+        <p>
+            It is used to format the layout of a webpage. With CSS, you can control the color, font, the size of the
+            text,
+            the spacing between the elements, how elements are positioned and laid out, what barckground images or
+            background
+            colors are to be used, different displays for different devices and screen sizes and so much more.
+        </p>
+        <h3>Using CSS</h3>
+        <p>CSS can be added to HTML documents in 3 ways:</p>
+        <ul>
+            <li><b>Inline</b>: by using the <code>style</code> attribute inside HTML elements</li>
+            <li><b>Internal</b>: by using a <code>&lt;style&gt;</code> element in the <code>&lt;head&gt;</code> section
+            </li>
+            <li><b>External</b>: by using a <code>&lt;link&gt;</code> element to link to an external CSS file</li>
+        </ul>
+        <p>
+            The most common way to add CSS, is to keep the styles in external CSS files. However, in this tutorial we
+            will use
+            inline and internal styles, because this is easier to demonstrate, and easier for you to try it yourself.
+        </p>
+        <hr>
+        <h3>Inline CSS</h3>
+        <p>An inline CSS is used to apply a unique style to a single html element <br>An inline CSS uses the
+            <code>style</code> attribute of an HTML element
+        </p>
+        <p style="color: turquoise;">Color raro</p>
+        <h3>Internal CSS</h3>
+        <p>An internal CSS is defined in the head section of an HTML page, within a style element</p>
+        <ul>
+            <li>html</li>
+            <li>head</li>
+            <li>style</li>
+            <li>body {background-color: blue;}</li>
+            <li>h1 {color: blue;}</li>
+            <li>p {color: blue;}</li>
+            <li>/style</li>
+            <li>/head</li>
+            <li>/body</li>
+        </ul>
+        <h3>External CSS</h3>
+        <p>An external CSS is used to define the style for many HTML pages.</p>
+        <p>To use an external style sheet, add a link to it in the head section of HTML page.</p>
+        <p><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></p>
+        <hr>
+    </section>
+
+    <section>
+        <h2 id="htmlcsscolors">CSS Color, Fonts and Sizes</h2>
+        <h3></h3>
+        <p>The CSS <code>color</code> property defines the text color to be used</p>
+        <p>The CSS <code>font-family</code> property defines the font to be used</p>
+        <p>The CSS <code>font-size</code> property defines the text size to be used</p>
+        <h3>CSS Border</h3>
+        <p>The CSS <code>border</code> property defines a border around an HTML element</p>
+        <h3>CSS Padding</h3>
+        <p>The CSS <code>padding</code> property defines a padding (relleno) space between the text and the border</p>
+        <p>Instead of specifying an element's <code>padding-top, padding-rigth, padding-bottom, padding-left</code>
+            properties individually, you can specify them all in one like this:</p>
+        <p><code>padding: 10px 20px 10px 20px;</code></p>
+        <p>These four values work like a clock: top, right, bottom, left.</p>
+        <h3>CSS Margin</h3>
+        <p>The CSS <code>margin</code> property defines a margin (space) outside the border</p>
+        <h3>Link to external CSS</h3>
+        <p>This example uses a full URL to link to a style sheet</p>
+        <p><code>&lt;link rel="stylesheet" href="https://w3schools.com/html/styles.css"&gt;</code></p>
+        <hr>
+    </section>
+
+    <!-- HTML Links -->
+    <section>
+        <h2 id="htmllinks">HTML Links</h2>
+        <h3>HTML Links - Hyperlinks</h3>
+        <p>HTML Links are hyperlinks <br>You can click on a link and jump to another document <br>When you move the
+            mouse
+            over a link, the mouse arrow will turn into a little hand</p>
+        <h3>HTML Links</h3>
+        <a href="https://www.youtube.com/">YouTube.com</a>
+        <p>By default, links will appear as follows in al browsers:</p>
+        <ul>
+            <li>An unvisited link is underlined and blue</li>
+            <li>A visited link is underlined and purple</li>
+            <li>An active link is underlined and red</li>
+        </ul>
+        <h3>HTML Links - The target attribute</h3>
+        <p>By default, the linked page will be displayed in the current browser window. To change this, you must specify
+            another target for the link.</p>
+        <p>The <code>target</code> attribute specifies where to open the linked document</p>
+        <ul>
+            <li><code>_self</code> Opens the document in the same window as it was clicked</li>
+            <li><code>_blank</code> Opens the document in a new window or tab</li>
+            <li><code>_parent</code> Opens the document in the parent frame</li>
+            <li><code>_top</code> Opens the document in the full body of the window</li>
+        </ul>
+        <h4>Absolute URLs</h4>
+        <p><a href="https://www.w3.org/">W3C</a></p>
+        <p><a href="https://www.google.com/">Google</a></p>
+        <h4>Relative URLs</h4>
+        <p><a href="html_images.asp">HTML Images</a></p>
+        <p><a href="/css/default.asp">CSS Tutorial</a></p>
+        <h3>HTML Links - Image as a Link</h3>
+        <p>To use an image as a link, just put the <code>&lt;img&gt;</code> tag inside the <code>&lt;a&gt;</code> tag
+        </p>
+        <a href="https://www.twitch.tv/" target="_blank">
+            <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.subpng.com%2Fpng-8tsvin%2F&psig=AOvVaw04buzL0lsaPN365isZOsR_&ust=1632262184828000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCODo4NDIjvMCFQAAAAAdAAAAABAD"
+                alt="Twitch Icon" style="width: 44px; height: 44px;">
+        </a>
+        <h3>Link to an email address</h3>
+        <p>Use <code>mailto:</code> inside the <code>href</code> attribute to create a link that opens the user's email
+            program</p>
+        <a href="mailto:angel.serrato@zohomail.com" title="angel.serrato@zohomail.com">Send email</a>
+        <h3>Button as a link</h3>
+        <p>To use an HTML button as a link, you have to add some JavaScript code</p>
+        <button onclick="document.location='productos.html'">Productos</button>
+        <h3>Link Titles</h3>
+        <p>The <code>title</code> attribute specifies extra information about an element.</p>
+        <a href="https://www.twitch.tv/" title="Have fun on twitch" target="_blank">Visit Twitch</a>
+        <hr>
+    </section>
+
+    <!-- HTML Links - Different colors -->
+    <section>
+        <h2 id="htmllinkscolors">HTML Links - Different Colors</h2>
+        <h3>Link Colors</h3>
+        <p>You can change the default colors of links</p>
+        <p><code>a:link, a:visited, a:hover, a:active</code></p>
+        <p>You have to set it this way:</p>
+        <ul>
+            <li><code>background-color: transparent</code></li>
+        </ul>
+        <a href="https://www.twitch.tv/" target="_blank" style="background-color: transparent; margin: 0;">Twitch
+            again</a>
+        <h3>Link Buttons</h3>
+        <p>A link styled as a button:</p>
+        <a href="https://www.twitch.tv/" target="_blank">This is a link to Twitch</a>
+        <hr>
+    </section>
+
+    <!-- HTML Links - Bookmarks -->
+    <section>
+        <h2 id="htmlbookmarks">HTML Links - Create Bookmarks</h2>
+        <h3>Bookmark in HTML</h3>
+        <p>When you click on a bookmark (marcador), the page will scroll down or up to the location with the bookmark
+        </p>
+        <ul>
+            <li>Use the <code>id</code> attribute (id="value") to define bookmarks in a page</li>
+            <li>Use the <code>href</code> attribute (href="#value") to link to the bookmark</li>
+        </ul>
+        <hr>
+    </section>
+
+    <!-- HTML Images-->
+    <section>
+        <h2 id="htmlimages">HTML Images</h2>
+        <h3>HTML Images sintax</h3>
+        <p>Images can improve the design and the appearance of a web page</p>
+        <ul>
+            <li><code>src</code> specifies the path to the image</li>
+            <li><code>alt</code> specifies an alternate text for the image, it should descrie the image</li>
+        </ul>
+        <a href="https://www.imdb.com/title/tt0371746/" title="Iron Man 2008" target="_blank">
+            <img src="/images/iron-man.png" alt="Iron Man Icon" style="width: 44px; height: 44px;">
+        </a>
+        <h3>Image Size - Width and Height</h3>
+        <p>You can use the <code>style</code> attribute to specify the width and height of an image</p>
+        <p><code>&lt;img src="img_girl.jpg" alt="Girl in a jacket" style="width:500px;height:600px;"&gt;</code></p>
+        <p>Alternatively you can use the width and height attributes</p>
+        <p><code>&lt;img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600"&gt;</code></p>
+        <p>They always define the width and height of the image in pixels</p>
+        <p>We suggest to use the <code>style</code> attribute</p>
+        <h3>Images in another folder</h3>
+        <p>If you have your images in a sub-folder, you must include the folder name in the <code>src</code> attribute
+        </p>
+        <img src="/images/iron-man.png" alt="Iron Man Icon" style="width: 128px; height: 128px;">
+        <p><code>&lt;img src= <mark>"/images/html5.gif"</mark> alt="Iron Man Icon" style="width:128px;height:128px;"&gt;</code>
+        </p>
+        <div>
+            <h3>Images on another server/website</h3>
+            <p>To point an image on another server, you must specify an absolute full URL in the <code>src</code>
+                attribute
+            </p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3uLgLh4EvreCa6WdZBnvhjq3ODpvt9OcxIg&usqp=CAU"
+                alt="Charli D'amelio">
+            <p><code>&lt;img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3uLgLh4EvreCa6WdZBnvhjq3ODpvt9OcxIg&usqp=CAU"
+        alt="Charli D'amelio"&gt;</code></p>
+        </div>
+        <div>
+            <h3>Animated Images</h3>
+            <p>HTML allows animated GIFs</p>
+            <img src="/gif/7IsD.gif" alt="Gif" title="Gif" style="width: 140px; height: 140px;">
+        </div>
+        <div>
+            <h3>Image Floating</h3>
+            <p>Use the CSS <code>float</code> property to let the image float to the right or to the left of a text</p>
+            <p><img src="/images/iron-man.png" alt="Iron Man Icon" style="float: left;" title="Iron Man Icon">Lorem
+                ipsum
+                dolor sit amet
+                consectetur adipisicing elit. Aperiam, sint consectetur. Nam laudantium corrupti
+                nesciunt inventore quos cupiditate? Aspernatur exercitationem sint dicta suscipit deserunt hic totam
+                harum,
+                quaerat at debitis?</p>
+        </div>
+        <div>
+            <h3>Common Image Formats</h3>
+            <p>Here are the most common image file types</p>
+            <ul>
+                <li>APNG - Animated Portable Network Graphics .apng</li>
+                <li>GIF - Graphics Interchange Format .gif</li>
+                <li>ICO - Microsoft Icon .ico</li>
+                <li>JPEG - Joint Photographic Expert Group Image .jpg .jpeg .pjpeg .jfif .pjp</li>
+                <li>PNG - Portable Network Graphics .png</li>
+                <li>SVG - Scalable Vector Graphics .svg</li>
+            </ul>
+        </div>
+        <hr>
+    </section>
+
+    <!-- HTML Image Maps -->
+    <section>
+        <h2 id="htmlimagemaps">HTML Image Maps</h2>
+        <h3>Image Maps</h3>
+        <p>With HTML image maps you can create clickable areas on an image</p>
+        <p>The HTML <code>map</code> tag defines an image map</p>
+        <p>The areas are defined with one or more <code>area</code> tags</p>
+        <img src="/images/pc-coffee-celphone.jpeg" alt="Workplace" usemap="#workmap">
+        <map name="workmap">
+            <area coords="497,116,620,352" shape="rect" alt="celular"
+                href="https://www.google.com/search?channel=fs&client=ubuntu&q=celular">
+            <area coords="171,211,153" shape="circle" alt="café"
+                href="https://www.google.com/search?q=cafe&client=ubuntu&hs=07E&channel=fs&sxsrf=AOaemvI-iwuSA5pdSc54xiNEsK54qHOmtQ%3A1632193325906&ei=LUtJYfDcNqibwbkPg6OemA0&oq=cafe&gs_lcp=Cgdnd3Mtd2l6EAMyBwguEEMQkwIyBQguEIAEMgsILhCABBDHARCvATIFCAAQgAQyBQgAEIAEMgUILhCABDIFCC4QgAQyCwguEIAEEMcBEK8BMgUIABCABDIFCAAQgAQ6BwgAEEcQsAM6BAgjECc6BAguECc6BQgAEJECOgsILhDHARDRAxCRAjoLCC4QgAQQxwEQowI6BAgAEEM6CgguEMcBENEDEEM6CwguEIAEEMcBENEDSgQIQRgAUJlYWL1bYO1caAFwAngAgAGUAYgBxQSSAQMwLjSYAQCgAQHIAQjAAQE&sclient=gws-wiz&ved=0ahUKEwiwp5T7iY_zAhWoTTABHYORB9MQ4dUDCA0&uact=5">
+            <area coords="687,162,958,240,847,654,561,559" shape="poly" alt="ipad"
+                href="https://www.google.com/search?channel=fs&client=ubuntu&q=ipad">
+        </map>
+        <h3>How does this work?</h3>
+        <p>You should be able to perform different actions depending on where in the image you click</p>
+        <p>To create an image map you need an image, and some HTML code that describes the clickable areas</p>
+        <h3>The image</h3>
+        <p>The image is inserted using the <code>&lt;img&gt;</code> tag. The only difference from other images is that
+            you
+            must add <code>usemap</code> attribute</p>
+        <code>&lt;img src="/images/pc-coffee-celphone.jpeg" alt="Workplace" usemap="#workmap"&gt;</code>
+        <p>The <code>usemap</code> value starts with a hash tag <code style="font-size: 20px;">#</code> followed by the
+            name
+            of the image map, and is used to create a relationship between the image and the image map</p>
+        <h3>Create an image map</h3>
+        <p>Then, add a <code>map</code> element</p>
+        <p>The <code>map</code> element is used to create an image map, and is linked to the image by using the required
+            <code>name</code> attribute
+        </p>
+        <p><code>&lt;map name="workmap"&gt;</code></p>
+        <p>The <code>name</code> attribute must have the same value as the <code>&lt;img&gt; usemap</code>
+            attribute</p>
+        <h3>The areas</h3>
+        <p>A clickable area is defined using an <code>&lt;area&gt;</code> element</p>
+        <h4>Shape</h4>
+        <p>You must define the shape of the clickable area, and you can choose one of these values:</p>
+        <ul>
+            <li><code>rect</code> - defines a rectangular region</li>
+            <li><code>circle</code> - defines a circular region</li>
+            <li><code>poly</code> - defines a polygonal region</li>
+            <li><code>default</code> - defines the entire region</li>
+        </ul>
+        <p>You must also define some coordinates to be able to place the clickable area onto the image</p>
+        <h3>Image map and JavaScript</h3>
+        <p>A clickable area can also trigger a JavaScript function</p>
+        <p>Add a <code>click</code> event to the <code>&lt;area&gt;</code> element to execute a JavaScript function</p>
+        <img src="/images/iron-man.png" alt="Iron Man Icon" usemap="#workmap">
+        <map name="workmap">
+            <area shape="default" alt="Iron Man" href="https://www.google.com/search?channel=fs&client=ubuntu&q=celular"
+                onclick="myFunction()">
+        </map>
+        <script>
+            function myFunction() {
+                alert("You clicked the Iron Man Icon!");
+            }
+        </script>
+        <hr>
+    </section>
+
+    <!-- HTML Background Images -->
+    <section>
+        <h2 id="htmlbackground">HTML Background Images</h2>
+        <h3>Background Image on a HTML element</h3>
+        <p>To add a background image to a HTML element, use the HTML <code>style</code> attribute and the CSS
+            <code>background-image</code> property
+        </p>
+        <div style="background-image: url('/images/iron-man.png');">Lorem ipsum dolor sit amet consectetur,
+            adipisicing elit. Maiores nam veritatis repudiandae perferendis officia minima cupiditate ratione ea omnis
+            nostrum
+            eligendi a ut eaque corrupti, cum doloremque fugit dolorum quaerat ut.</div>
+        <p>You can also specify the background image in the <code>style</code> element, in the <code>head</code> section
+        </p>
+        <h3>Background image on a page</h3>
+        <p>If you want the entire page to have a background image, you must specify the background image on the
+            <code>&lt;body&gt;</code> element
+        </p>
+        <h3>Background repeat</h3>
+        <p>If the background image is smaller than the element, the image will repeat itself. horizontally and
+            vetically,
+            until it reaches the end of the element</p>
+        <p>To avoid the background image from repeating itself, set the <code>background-repeat</code> property to
+            <code>no-repeat</code>
+        </p>
+        <h3>Background cover</h3>
+        <p>If you want the background image to cover the entire element, you can set the <code>background-size</code>
+            property to <code>cover</code></p>
+        <p>Also, to make sure the entire element is always covered, set the <code>background-attachment</code> property
+            to
+            <code>fixed</code>
+        </p>
+        <h3>Background stretch</h3>
+        <p>If you want the background image to stretch to fit the entire element, you can set the
+            <code>background-size</code> property to <code>100% 100%</code>
+        </p>
+        <hr>
+    </section>
+
+    <!-- HTML picture element -->
+    <section>
+        <h2>HTML &lt;picture&gt; Element</h2>
+        <h3>The HTML &lt;picture&gt; Element</h3>
+        <p>The HTML <code>&lt;picture&gt;</code> element gives web developers more flexibility in specifying image
+            resources
+        </p>
+        <p>The <code>&lt;picture&gt;</code> element contains one or more <code>&lt;source&gt;</code> elements, each
+            referring to different images through the <code>srcset</code> attribute. This way the browser can choose the
+            image
+            that best fits the current view and/or device</p>
+        <p>Each <code>&lt;source&gt;</code> element has a <code>media</code> attribute that defines when the image is
+            the
+            most suitable</p>
+        <picture>
+            <source media="(min-width: 650px)" srcset="/images/music.png">
+            <source media="(min-width: 465px)" srcset="/images/mail.png">
+            <img src="/images/map.png" style="width: auto;">
+        </picture>
+        <h3>When to use picture element</h3>
+        <ul>
+            <li>Bandwidth</li>
+            <p>If you have a small screen or device, it is not necessary to load a large image file</p>
+            <li>Format support</li>
+            <p>You can add images of all formats, and the browser will use the first format it recognizes, and ignore
+                any of
+                the following elements</p>
+        </ul>
+    </section>
+
+    <!-- HMTL Tables-->
+    <section>
+        <h2 id="htmltables">HTML Tables</h2>
+        <h3>Define an HTML Table</h3>
+        <p>A table in HTML consists of table cells inside rows and columns</p>
+        <table>
+            <tr>
+                <th>Company</th> <!-- tr = table row -->
+                <th>Contact</th> <!-- th = table header -->
+                <th>Country</th> <!-- td = table data -->
+            </tr>
+            <tr>
+                <td>ReiDidGG</td>
+                <td>Angel</td>
+                <td>Colombia</td>
+            </tr>
+            <tr>
+                <td>Apple</td>
+                <td>Francisco</td>
+                <td>USA</td>
+            </tr>
+        </table>
+        <h3>Table Cells</h3>
+        <p>Each table cell is defined by a tag</p>
+        <ul>
+            <li><code>&lt;th&gt;</code> means table header</li>
+            <li><code>&lt;td&gt;</code> means table data</li>
+            <li><code>&lt;tr&gt;</code> means table row</li>
+        </ul>
+        <p>By default, the text in <code>&lt;th&gt;</code> elements are bold and centered, but you can change that with
+            CSS
+        </p>
+    </section>
+
+    <!-- HTML Borders -->
+    <section>
+        <h2 id="tableborders">HTML Table Borders</h2>
+        <h3>Add a border</h3>
+        <p>Use the CSS border property to add a border to the table.</p>
+        <table id="tablauno">
+            <tr>
+                <th>Company</th> <!-- tr = table row -->
+                <th>Contact</th> <!-- th = table header -->
+                <th>Country</th> <!-- td = table data -->
+            </tr>
+            <tr>
+                <td>ReiDidGG</td>
+                <td>Angel</td>
+                <td>Colombia</td>
+            </tr>
+            <tr>
+                <td>Apple</td>
+                <td>Francisco</td>
+                <td>USA</td>
+            </tr>
+        </table>
+        <h3>Collapsed table borders</h3>
+        <p>To avoid having double borders like in the example above, set the CSS <code>border-collapse</code> property
+            to <code>collapse</code></p>
+        <table id="tablados">
+            <tr>
+                <th>Company</th> <!-- tr = table row -->
+                <th>Contact</th> <!-- th = table header -->
+                <th>Country</th> <!-- td = table data -->
+            </tr>
+            <tr>
+                <td>ReiDidGG</td>
+                <td>Angel</td>
+                <td>Colombia</td>
+            </tr>
+            <tr>
+                <td>Apple</td>
+                <td>Francisco</td>
+                <td>USA</td>
+            </tr>
+        </table>
+        <h3>Style table borders</h3>
+        <p>Style the table with white borders and a background color of the cells to make the impression of invisible
+            borders.</p>
+        <table id="tablatres">
+            <tr>
+                <th>Company</th> <!-- tr = table row -->
+                <th>Contact</th> <!-- th = table header -->
+                <th>Country</th> <!-- td = table data -->
+            </tr>
+            <tr>
+                <td>ReiDidGG</td>
+                <td>Angel</td>
+                <td>Colombia</td>
+            </tr>
+            <tr>
+                <td>Apple</td>
+                <td>Francisco</td>
+                <td>USA</td>
+            </tr>
+        </table>
+        <h3>Round table borders</h3>
+        <p>With the <code>border-radius</code> property, the borders get rounded corner.</p>
+        <table id="tablacuatro">
+            <tr>
+                <th>Company</th> <!-- tr = table row -->
+                <th>Contact</th> <!-- th = table header -->
+                <th>Country</th> <!-- td = table data -->
+            </tr>
+            <tr>
+                <td>ReiDidGG</td>
+                <td>Angel</td>
+                <td>Colombia</td>
+            </tr>
+            <tr>
+                <td>Apple</td>
+                <td>Francisco</td>
+                <td>USA</td>
+            </tr>
+        </table>
+        <h3>Dotted table borders</h3>
+        <p>With the <code>border-style</code> property, you can set the appearance of the border.</p>
+        <ul>
+            <li><code>dotted</code></li>
+            <li><code>dashed</code></li>
+            <li><code>solid</code></li>
+            <li><code>double</code></li>
+            <li><code>groove</code></li>
+            <li><code>ridge</code></li>
+            <li><code>inset</code></li>
+            <li><code>outset</code></li>
+            <li><code>none</code></li>
+            <li><code>hidden</code></li>
+        </ul>
+        <h3>Border Color</h3>
+        <p>With the <code>border-color</code> property, you can set the color of the border.</p>
+        <table class="tablacinco">
+            <tr>
+                <th>Company</th> <!-- tr = table row -->
+                <th>Contact</th> <!-- th = table header -->
+                <th>Country</th> <!-- td = table data -->
+            </tr>
+            <tr>
+                <td>ReiDidGG</td>
+                <td>Angel</td>
+                <td>Colombia</td>
+            </tr>
+            <tr>
+                <td>Apple</td>
+                <td>Francisco</td>
+                <td>USA</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- HTML Table Sizes -->
+    <section>
+        <h2 id="tablesizes">HTML Table Sizes</h2>
+        <h3>HTML Table Width</h3>
+        <p>To set the width of a table, add the <code>style</code> attribute to the <code>table</code> element.</p>
+        <table style="width:50%">
+            <tr>
+                <th style="width:70%">Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+            </tr>
+            <tr style="height:100px;">
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>80</td>
+            </tr>
+        </table>
+        <h3>HTML Table Column Width</h3>
+        <p>To set the size of a specific column, add the <code>style</code> attribute on a <code>th</code> or
+            <code>td</code> element
+        </p>
+        <h3>HTML Table Row Height</h3>
+        <p>To set the height of a specific row, add the <code>style</code> attribute on a table row element.</p>
+    </section>
+
+    <!-- HTML Table Headers -->
+    <section>
+        <h2 id="tableheader">HTML Table Headers</h2>
+        <h3>HTML table headers</h3>
+        <p>La cabecera de la tabla se define con <code>th</code>, cada <code>th</code> representa una celda.</p>
+        <h3>Header for multiple columns</h3>
+        <p>Para que la cabecera de una tabla ocupe dos o más celdas se debe utilizar el atributo <code>colspan</code> en
+            el elemento <code>th</code>.</p>
+        <h3>Table caption</h3>
+        <p>Se puede agregar una leyenda que sirve como el título cabecera de la tabla</p>
+        <p>Para agregarlo se usa la etiqueta <code>caption</code> y va después de la etiqueta <code>table</code>.</p>
+        <h3>CSS Padding, Border, and Margin</h3>
+        <p><strong>Padding</strong>: Relleno requerido por todos los lados de un elemento. Es el espacio entre el
+            contenido de un elemento y su borde.</p>
+        <p><strong>Border</strong>: Define de golpe todos los bordes. Se puede usar para definir el o los siguientes
+            valores.</p>
+        <ul>
+            <li>border-width</li>
+            <li>border-style</li>
+            <li>border-color</li>
+            <li>border-radius</li>
+        </ul>
+        <p>Border también es una propiedad abreviada(shorthand), es decir que permite asignar el valor de muchas otras
+            propiedades de CSS al mismo tiempo. Como por ejemplo:</p>
+        <ul>
+            <li>background</li>
+            <li>border</li>
+            <li>font</li>
+            <li>margin</li>
+            <li>padding</li>
+        </ul>
+        <p><strong>Margin</strong>: Establece el margen para los cuatro lados. Es la abreviación de:</p>
+        <ul>
+            <li>margin-top</li>
+            <li>margin-right</li>
+            <li>margin-bottom</li>
+            <li>margin-left</li>
+        </ul>
+        <h3>Cell padding</h3>
+        <p>Es el espacio entre el contenido de la tabla y su borde</p>
+        <p><code>padding:</code> 10px;</p>
+        <h3>Cell spacing</h3>
+        <p>Es el espacio intermedio entre cada celda de la tabla, para que se vea podemos usar <code>border</code> y
+            <code>border-spacing</code>
+        </p>
+        <h3>Table colspan & rowspan</h3>
+        <p>Para que una celda ocupe mas columnas utilizamos el artibuto <code>colspan="2"</code></p>
+        <p>Para que una celda ocupe mas filas utilizamos el artibuto <code>rowspan="2"</code></p>
+        <h3>Table styling</h3>
+        <h4>Zebra stripes</h4>
+        <p>Para que la tabla luzca como las tablas de excel puedes usar el selector <code>:nth-child(even)</code> en
+            esta forma:</p>
+        <p><code>tr:nth-child(even)</code> colorea las filas pares</p>
+        <p><code>tr:nth-child(odd)</code> colorea las filas impares</p>
+        <h3>Horizontal Dividers</h3>
+        <table style="border-bottom: 1px solid steelblue; border-collapse: collapse;">
+            <tr style="border-bottom: 1px solid steelblue;">
+                <th>header 1</th>
+                <th>header 2</th>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td>dato</td>
+                <td>dato</td>
+            </tr>
+            <tr style="border-bottom: 1px solid steelblue;">
+                <td>dato</td>
+                <td>dato</td>
+            </tr>
+        </table>
+        <h3>Hoverable table</h3>
+        <p>Use the <code>:hover</code> selector on <code>tr</code> to highlight table rows on mouse over.</p>
+        <h3>Table colgroup</h3>
+        <p>Si se le quiere colocar estilo a dos columnas de una tabla, usa <code>colgroup</code> y <code>col</code>
+            elements.</p>
+        <table>
+            <colgroup>
+                <col span="2" style="background-color: teal;">
+            </colgroup>
+            <tr>
+                <th>table header</th>
+                <th>table header</th>
+                <th>table header</th>
+            </tr>
+            <tr>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+            </tr>
+            <tr>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+            </tr>
+        </table>
+        <h3>Legal CSS Properties</h3>
+        <p>Solo hay unas pocas propiedades de CSS que estan permitidas para ser usadas en <code>colgroup</code></p>
+        <ul>
+            <li><strong>width</strong></li>
+            <li><strong>visibility</strong></li>
+            <li><strong>background</strong></li>
+            <li><strong>border</strong></li>
+        </ul>
+        <p>El resto de propiedades de CSS no tendrán ningun efecto en las tablas</p>
+        <h3>Multiple col elements</h3>
+        <table>
+            <colgroup>
+                <col span="2" style="background-color: tomato;">
+                <col span="3" style="background-color: turquoise;">
+            </colgroup>
+            <tr>
+                <th>header</th>
+                <th>header</th>
+                <th>header</th>
+                <th>header</th>
+                <th>header</th>
+                <th>header</th>
+            </tr>
+            <tr>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+            </tr>
+            <tr>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+            </tr>
+            <tr>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+            </tr>
+            <tr>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+            </tr>
+        </table>
+        <h3>Empty colgroups</h3>
+        <table>
+            <colgroup>
+                <col span="1">
+                <col span="2" style="background-color: turquoise;">
+                <col span="2" style="background-color: violet;">
+            </colgroup>
+            <tr>
+                <th>header</th>
+                <th>header</th>
+                <th>header</th>
+                <th>header</th>
+                <th>header</th>
+                <th>header</th>
+            </tr>
+            <tr>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+            </tr>
+            <tr>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+            </tr>
+            <tr>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+            </tr>
+            <tr>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+            </tr>
+        </table>
+        <h3>Hide columns</h3>
+        <table>
+            <colgroup>
+                <col span="1">
+                <col span="2" style="visibility: collapse;">
+                <col span="2" style="background-color: violet;">
+            </colgroup>
+            <tr>
+                <th>header</th>
+                <th>header</th>
+                <th>header</th>
+                <th>header</th>
+                <th>header</th>
+                <th>header</th>
+            </tr>
+            <tr>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+            </tr>
+            <tr>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+            </tr>
+            <tr>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+            </tr>
+            <tr>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- HTML Lists -->
+    <section>
+        <h2 id="lists">HTML Lists</h2>
+        <h3>Unordered list</h3>
+        <ul>
+            <li>Coffee</li>
+            <li>Milk</li>
+            <li>Bread</li>
+        </ul>
+        <h3>Ordered list</h3>
+        <ol>
+            <li>Coffee</li>
+            <li>Milk</li>
+            <li>Bread</li>
+        </ol>
+        <h3>HTML Description List</h3>
+        <p>Es una lista de términos, con su respectiva descripción.</p>
+        <ul>
+            <li><strong>dl</strong> description list</li>
+            <li><strong>dt</strong> description term</li>
+            <li><strong>dd</strong> describes the term in a description list</li>
+        </ul>
+        <dl>
+            <dt>Coffee</dt>
+            <dd>black hot drink</dd>
+            <dt>Milk</dt>
+            <dd>white cold drink</dd>
+        </dl>
+        <h3>Unordered list</h3>
+        <ul style="list-style-type: disc;">
+            <li>Coffee</li>
+        </ul>
+        <ul style="list-style-type: circle;">
+            <li>Coffee</li>
+        </ul>
+        <ul style="list-style-type: square;">
+            <li>Coffee</li>
+        </ul>
+        <ul style="list-style-type: none;">
+            <li>Coffee</li>
+        </ul>
+        <h3>Nested HTML Lists</h3>
+        <ul>
+            <li>Add</li>
+            <li>ad
+                <ul>
+                    <li>doble</li>
+                    <li>triple</li>
+                </ul>
+            </li>
+            <li>Ad</li>
+        </ul>
+        <h3>Horizontal List with CSS</h3>
+        <p>One popular way is to style a list horizontally, to create a navigation menu</p>
+        <ul style="list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color: #333333;">
+            <li style="float: left;"><a href="#"
+                    style="display: block; color: white; text-align: center; padding: 16px; text-decoration: none;">Home</a>
+            </li>
+            <li style="float: left;"><a href="#"
+                    style="display: block; color: white; text-align: center; padding: 16px; text-decoration: none;">Course</a>
+            </li>
+            <li style="float: left;"><a href="#"
+                    style="display: block; color: white; text-align: center; padding: 16px; text-decoration: none;">About</a>
+            </li>
+            <li style="float: left;"><a href="#"
+                    style="display: block; color: white; text-align: center; padding: 16px; text-decoration: none;">Contact</a>
+            </li>
+        </ul>
+        <p>Use the CSS property <code>float: left</code> to display a list horizontally</p>
+        <h3>Ordered HTML list</h3>
+        <ol type="1">
+            <li>Coffee</li>
+            <li>Milk</li>
+            <li>Chocolate</li>
+        </ol>
+        <ol type="A">
+            <li>Coffee</li>
+            <li>Milk</li>
+            <li>Chocolate</li>
+        </ol>
+        <ol type="a">
+            <li>Coffee</li>
+            <li>Milk</li>
+            <li>Chocolate</li>
+        </ol>
+        <ol type="I">
+            <li>Coffee</li>
+            <li>Milk</li>
+            <li>Chocolate</li>
+        </ol>
+        <ol type="i">
+            <li>Coffee</li>
+            <li>Milk</li>
+            <li>Chocolate</li>
+        </ol>
+    </section>
+
+    <!-- HTML Block and inline elements -->
+    <section>
+        <h2 id="inline">HTML block and inline elements</h2>
+        <p>Cada elemento HTML tiene un valor de visualización por defecto, dependiendo del tipo de elemento que sea.
+        </p>
+        <p>Existen dos valores de visualización: block y inline.</p>
+        <h3>Block-level elements</h3>
+        <p>Un elemento block-level siempre inicia en una nueva línea.</p>
+        <p>Un elemento block-level siempre ocupa el total de ancho disponible (se extiende de izquierda a derecha tanto
+            como pueda)</p>
+        <p>Un elemento block-level tiene margen arriba y abajo, (whereas) mientras que un elemento inline no.</p>
+        <p>The <code>div</code> element is a block-level element</p>
+        <h3>Div element</h3>
+        <p>El elemento div siempre inicia en una nueva línea y ocupa el total de ancho disponible, se extiende de
+            izquierda a derecha tanto como pueda.</p>
+        <div style="background-color: lightcoral; color: white; border: 1px solid black;">Este es un hermoso div</div>
+        <p>Esta es una lista de los elementos block-level en HTML</p>
+        <ul>
+            <li><code>address</code></li>
+            <li><code>article</code></li>
+            <li><code>aside</code></li>
+            <li><code>blockquote</code></li>
+            <li><code>canvas</code></li>
+            <li><code>dd</code></li>
+            <li><code>div</code></li>
+            <li><code>dl</code></li>
+            <li><code>dt</code></li>
+            <li><code>fieldset</code></li>
+            <li><code>figcaption</code></li>
+            <li><code>figure</code></li>
+            <li><code>footer</code></li>
+            <li><code>form</code></li>
+            <li><code>h1-h6</code></li>
+            <li><code>header</code></li>
+            <li><code>hr</code></li>
+            <li><code>li</code></li>
+            <li><code>main</code></li>
+            <li><code>nav</code></li>
+            <li><code>noscript</code></li>
+            <li><code>ol</code></li>
+            <li><code>p</code></li>
+            <li><code>pre</code></li>
+            <li><code>section</code></li>
+            <li><code>table</code></li>
+            <li><code>tfoot</code></li>
+            <li><code>ul</code></li>
+            <li><code>video</code></li>
+        </ul>
+        <h3>Inline elementns</h3>
+        <p>Un elemento inline no inicia en una nueva línea.</p>
+        <p>Un elemento inline ocupa tanta anchura como sea necesaria.</p>
+        <p>Este es un elemento span <span style="background-color: yellow; color: black; font-size: 15px;">Soy
+                span</span> dentro de un
+            párrafo.
+        </p>
+        <p>Esta es una lista de elementos inline en HTML</p>
+        <ul>
+            <li><code>a</code></li>
+            <li><code>abbr</code></li>
+            <li><code>acronym</code></li>
+            <li><code>b</code></li>
+            <li><code>bdo</code></li>
+            <li><code>big</code></li>
+            <li><code>br</code></li>
+            <li><code>button</code></li>
+            <li><code>cite</code></li>
+            <li><code>code</code></li>
+            <li><code>dfn</code></li>
+            <li><code>em</code></li>
+            <li><code>i</code></li>
+            <li><code>img</code></li>
+            <li><code>input</code></li>
+            <li><code>kbd</code></li>
+            <li><code>label</code></li>
+            <li><code>map</code></li>
+            <li><code>object</code></li>
+            <li><code>output</code></li>
+            <li><code>q</code></li>
+            <li><code>samp</code></li>
+            <li><code>script</code></li>
+            <li><code>select</code></li>
+            <li><code>small</code></li>
+            <li><code>span</code></li>
+            <li><code>strong</code></li>
+            <li><code>sub</code></li>
+            <li><code>sup</code></li>
+            <li><code>textarea</code></li>
+            <li><code>time</code></li>
+            <li><code>tt</code></li>
+            <li><code>var</code></li>
+        </ul>
+        <p>Un elemento inline no puede contener un elemento block-level</p>
+        <h3>Div Element</h3>
+        <p>El elemento <code>div</code> es a menudo utilizado como contenedor de elemntos html.</p>
+        <p>El elemento <code>div</code> puede ser utilizado para darle estilo a los bloques de contenido.</p>
+        <h3>Span Element</h3>
+        <p>El elemento <code>span</code> es un contenedor en linea usado para resaltar la parte de un texto.</p>
+        <p>El elemento <code>span</code> puede ser utilizado para darle estilo a los bloques de contenido.</p>
+    </section>
+
+    <!-- HTML Class Attribute -->
+    <section>
+        <h2 id="class">Class Attribute</h2>
+        <p>HTML <code>class</code> attribute es utilizado para especificar la clase de un elemento HTML</p>
+        <p>Varios elementos HTML pueden usar la misma clase.</p>
+        <p>Ejemplo: Si la clase en html se llama <code>class:"clase"</code> en css se le llama de la siguiente manera:
+            <code>.clase</code>
+        </p>
+    </section>
+
+    <!-- HTML ID Attribute -->
+    <section>
+        <h2 id="idatt">HTML id Attribute</h2>
+        <p>HTML <code>id</code> attribute es usado para especificar un id unico de un elemento html</p>
+        <p>No se puede tener mas de un elemento html con un mismo id</p>
+        <p>Ejemplo: Si el id se llama: <code>id="identificacion"</code> en css se le llama así;
+            <code>#identificacion</code>
+        </p>
+    </section>
+
+    <!-- HTML Iframes -->
+    <section>
+        <h2 id="iframe">HTML Iframes</h2>
+        <p>An HTML <code>iframe</code> is used to display a web page within a web page</p>
+        <iframe src="https://www.google.com/" title="Google" height="200" width="300"></iframe>
+        <h3>Target for a link</h3>
+        <iframe src="" name="frame" height="200" width="300"></iframe>
+        <p><a href="https://www.google.com/" target="frame">Link</a></p>
+    </section>
+
+    <!-- HTML head element -->
+    <section>
+        <h2>HTML Head Element</h2>
+        <h3>Meta element</h3>
+        <p>The <code>&lt;meta&gt;</code> element es usado para especificar el juego de caracteres, la descripción de la
+            pagina, palabras clave, autor del documento, and viewport settings</p>
+        <ul>
+            <li><code>&lt;meta charset="UTF-8"&gt;</code> juego de caracteres</li>
+            <li><code>&lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt;</code> palabras clave para motores de
+                busqueda</li>
+            <li><code>&lt;meta name="description" content="Free Web tutorials"&gt;</code> descripción de la pagina web
+            </li>
+            <li><code>&lt;meta name="author" content="John Doe"&gt;</code> autor de la pagina</li>
+            <li><code>&lt;meta http-equiv="refresh" content="30"&gt;</code> refresca la pagina cada 30 segundos</li>
+            <li><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></li>
+            <p>content="width=device-width" ajusta el ancho de la pagina al ancho del dispositivo en el cual se esta
+                viendo la pagina</p>
+            <p>initial-scale=1.0" ajusta el zoom de la pagina cuando es cargada por primera vez</p>
+        </ul>
+    </section>
+
+    <!-- HTML Layout -->
+    <section>
+        <h2>HTML Layout o Distribución</h2>
+        <h3>Layout Elements</h3>
+        <p>Diferentes elementos que definen las diferentes partes de la pagina web</p>
+        <ul>
+            <li><code>&lt;header&gt;</code> define la cabecera de un documento o una seccion</li>
+            <li><code>&lt;nav&gt;</code> define un conjunto de enlaces</li>
+            <li><code>&lt;section&gt;</code> define la seccion de un documento</li>
+            <li><code>&lt;article&gt;</code> define contenido independiente</li>
+            <li><code>&lt;aside&gt;</code> define el contenido que se encuentra hacia un lado</li>
+            <li><code>&lt;footer&gt;</code> define el pie de pagina de un documento o seccion</li>
+        </ul>
+        <h3>Layout Tecniques</h3>
+        <p>Existen diferentes tecnicas para crear distribuciones en columna de una pagina</p>
+        <ul>
+            <li>CSS Frameworks como Sass, Bootstrap, TailwindCSS, entre otros</li>
+            <li>CSS float property</li>
+            <li>CSS flexbox</li>
+            <li>CSS grid</li>
+        </ul>
+    </section>
+
+    <!-- HTML Media Queries -->
+    <section>
+        <h2>HTML Media Queries</h2>
+        <h3></h3>
+        <p></p>
+    </section>
+
+</body>
+
+</html>

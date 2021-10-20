@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git & GitHub Notes</title>
+</head>
+
+<body>
+    <div>
+        <h1>Git & GitHub Notes</h1>
+        <h2>Commands</h2>
+        <h3>Installation</h3>
+        <p>You can find it <a href="https://git-scm.com/">here</a></p>
+        <ul>
+            <li><strong>git --version</strong></li>
+            <p>Version.</p>
+        </ul>
+        <h3>Setup</h3>
+        <p>Configuring user information used across all local repositories.</p>
+        <ul>
+            <li><strong>git config --global user.email "email@email.com"</strong></li>
+            <p>Adding user's email.</p>
+            <li><strong>git config --global user.name "username"</strong></li>
+            <p>Adding user's name.</p>
+            <li><strong>git config --global user.email</strong></li>
+            <p>You can verify the user's mail.</p>
+            <li><strong>git config --global user.name</strong></li>
+            <p>You can verify the user's name.</p>
+        </ul>
+        <h3>INIT</h3>
+        <p>Configuring user information, initializing and cloning repositories.</p>
+        <ul>
+            <li><strong>git clone https://github.com/reididgg/LearningNotes.git</strong></li>
+            <p>Clone a repository.</p>
+            <li><strong>git init</strong></li>
+            <p>You can initialize a local folder so git tracks it as a repository.</p>
+        </ul>
+        <h3>Stage and Snapshot</h3>
+        <p>Working with snapshots and the Git staging area</p>
+        <ul>
+            <li><strong>git status</strong></li>
+            <p>Show modified files in working directory, staged for your next commit.</p>
+            <li><strong>git add .</strong></li>
+            <p>Agrega todos los repositorios.</p>
+            <li><strong>git add [file]</strong></li>
+            <p>Add a file as it looks now to your next commit (stage).</p>
+            <li><strong>git reset [file]</strong></li>
+            <p>Unstage a file while retaining the changes in working directory.</p>
+            <li><strong>git diff</strong></li>
+            <p>diff of what is changed but not staged.</p>
+            <li><strong>git diff --staged</strong></li>
+            <p>diff of what is staged but not yet commited.</p>
+            <li><strong>git commit -m "Notas"</strong></li>
+            <p>Siempre se debe dejar nota en -m.</p>
+        </ul>
+        <h3>Share and update</h3>
+        <p>Retrieving updates from another repository and updating local repos.</p>
+        <ul>
+            <li><strong>git push</strong></li>
+            <p>Subimos todos los cambios a github.</p>
+            <li><strong>git pull</strong></li>
+            <p>Obtiene los archivos desde un repositorio.</p>
+            <li><strong>shift + q</strong></li>
+            <p>To exit.</p>
+            <li><strong></strong></li>
+        </ul>
+    </div>
+</body>
+
+</html>

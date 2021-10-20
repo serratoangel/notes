@@ -1,0 +1,137 @@
+/*
+h1, p, h2, li {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.sin-estilo li {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    font-size: 20px;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    line-height: 80px;
+    font-size: 70px;
+}
+h1 {
+    font-size: 70px;
+}
+h2 {
+    font-size: 55px;
+}
+p {
+    font-size: 30px;
+}
+code {
+    background-color: tomato;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+} 
+*/
+
+/* Barras de navegación vertical y horizontal */
+
+/* a {
+    text-decoration: none;
+}
+
+* {
+    font-family: 'Yaldevi', sans-serif;
+}
+
+.no-style {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+} */
+
+.vertical a {
+    display: block; /* modo de visualizacion */
+    width: 120px; /* anchura */
+    color: white; /* color de texto */
+    background-color: black; /* color de fondo */
+    text-align: center; /* centrar */
+    padding: 4px; /* espacio interior para que se ve mas grande */
+}
+
+/* .vertical a:hover, .vertical a:active {
+    background-color: whitesmoke;  
+     cuando recibe foco 
+}
+*/
+
+/* .horizontal li {
+    list-style-type: none;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+.horizontal a {
+    margin: 0;
+    color: white;
+    background-color: black;
+    text-align: center;
+    padding: 4px;
+} */
+
+/* .horizontal a:hover, .horizontal a:active {
+    background-color: whitesmoke;
+} */
+
+/* Estilos de encabezados */
+
+/* h1 {
+    text-align: center;
+    color: black;
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+} */
+
+/* Propiedades para definir el estilo de un texto */
+
+/* * {
+    margin: 0;
+    padding: 0%;
+} */
+
+.title {
+    width: 80%;
+    margin: auto;
+    text-align: end;
+    padding: 100px;
+}
+
+p {
+    font-family: ; /* familia tipográfica, la clasificación tipográfica de Francis Thibaudeau */
+    /* Con serifas(las terminaciones en los bordes), sin serifas, otras*/
+    /* Familias genéricas son: serif, sans-serif, cursive, fantasy, monospace */
+    font-size: ; /* tamaño de la letra puede ser: absoluto, relativo, tamaño, porcentaje */
+    font-weight: ; /* determina el grosor de los caracteres */
+    /* puede tomar los valores: normal, bold, bolder, ligther, 100, 200,300,400,500,600,700,800,900 */
+    font-style: ; /* el estilo de la fuente puede tomar estos valores: normal, italic, oblique*/
+    font-variant: ; /* permite seleccionar variaciones del tipo de letra */
+    /* puede ser: normal, small-caps(es una letra en mayuscula con el tamaño de las letras minusculas) */
+    font-size-adjust: ; /**/
+    font-stretch: ; /**/
+}
+
+p {
+    text-align: ; /* alinear el texto left,right,center,justify*/
+    text-indent: ; /* sangria de la primera linea */
+    text-decoration: ; /* algunos adornos para el texto puede ser: none, underline, overline, line-through, blink*/
+    text-transform: ; /* convertir en mayusculas o minusculas puede ser: capitalize, uppercase, lowercase, none */
+}
+
+p {
+    letter-spacing: ; /* distancia de separacion entre los caracteres */
+    word-spacing: ; /* espacio entre las palabras */
+    line-height: ; /* altura minima entre las lineas de texto */
+    white-space: ; /* define como se comporta los espacios en blanco puede ser: normal,pre,nowarp,prewrap,preline*/
+}
