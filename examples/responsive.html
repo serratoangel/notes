@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Responsive Design</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Esta línea se encarga del responsive design o diseño adaptable -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 
+    <link rel="stylesheet" href="colors.css" type="text/css">
+    <link rel="stylesheet" href="base.css" type="text/css">
+    <link rel="stylesheet" href="great.css" type="text/css" media="screen and (min-width: 981px)">
+    <link rel="stylesheet" href="medium.css" type="text/css"
+        media="screen and (min-width: 481px) and (max-width: 980px)">
+    <link rel="stylesheet" href="mini.css" type="text/css" media="screen and (max-width: 480px)"> 
+    -->
+
+    <style>
+        /* Base */
+        .display-great {
+            display: none;
+        }
+
+        .display-medium {
+            display: none;
+        }
+
+        .display-mini {
+            display: none;
+        }
+
+        .menu {
+            padding-left: 0;
+        }
+
+        .menu li {
+            display: inline;
+            list-style-type: none;
+        }
+
+        /* Colors */
+        body {
+            color: black;
+        }
+
+        a,
+        a:link,
+        a:visited,
+        a:hover {
+            color: blue;
+        }
+
+        header {
+            background-color: darksalmon;
+        }
+
+        nav {
+            background-color: darkseagreen;
+        }
+
+        section {
+            background-color: darkslateblue;
+        }
+
+        footer {
+            background-color: darkturquoise;
+        }
+
+        /* Great */
+        .display-great {
+            display: inherit !important;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+        }
+
+        header,
+        footer,
+        #wrapper {
+            margin-left: auto;
+            margin-right: auto;
+            clear: both;
+            width: 100%;
+            max-width: 1500px;
+        }
+
+        #main-nav {
+            float: left;
+            width: 20%;
+            max-width: 300px;
+        }
+
+        #main-section {
+            margin-left: 21%;
+            width: 79%;
+            max-width: 1200px;
+        }
+
+        /* Medium */
+        .display-medium {
+            display: inherit !important;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        /* Mini */
+        .display-mini {
+            display: inherit !important;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        select.display-mini {
+            font-size: 1.2em;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>El título de mi sitio web</h1>
+        <h2 class="display-great">Grande</h2>
+        <h2 class="display-medium">Mediano</h2>
+        <h2 class="display-mini">Pequeño</h2>
+    </header>
+    <div id="wrapper">
+        <nav id="main-nav">
+            <h2>Menú</h2>
+            <ul class="menu display-great display-medium">
+                <li><a href="">Uno</a></li>
+                <li><a href="">Dos</a></li>
+                <li><a href="">Tres</a></li>
+            </ul>
+            <select class="display-mini">
+                <option value="">Uno</option>
+                <option value="">Dos</option>
+                <option value="">Tres</option>
+            </select>
+        </nav>
+        <section id="main-section">
+            <h2>Mi contenido</h2>
+            <article>
+                <h3><a href="">Entrada 1</a></h3>
+                <p class="display-great display-medium">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                    enim nulla, blanditiis animi consequatur tempore quae perferendis quod tempora harum.</p>
+            </article>
+            <article>
+                <h3><a href="">Entrada 2</a></h3>
+                <p class="display-great display-medium">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                    enim nulla, blanditiis animi consequatur tempore quae perferendis quod tempora harum.</p>
+            </article>
+            <article>
+                <h3><a href="">Entrada 3</a></h3>
+                <p class="display-great display-medium">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                    enim nulla, blanditiis animi consequatur tempore quae perferendis quod tempora harum.</p>
+            </article>
+        </section>
+    </div>
+    <footer>
+        <p>Pie de página</p>
+        <select class="display-mini">
+            <option value="">Uno</option>
+            <option value="">Dos</option>
+            <option value="">Tres</option>
+        </select>
+    </footer>
+</body>
+
+</html>
