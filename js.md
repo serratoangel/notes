@@ -283,13 +283,105 @@ function otra() {
 }
 ```
 
+## Javascript III
+
+## Array
+
+Listan elementos para crear un conjunto de varias cosas o diferentes cajones
+
+Por ejemplo un archivador. Los arreglos son una lista de elementos que pueden ser string num o incluso otros arreglos
+
+Se debe separar por comas y se utiliza []
+
+```js
+var arreglo = [1, 2, 3, 4, 5];
+let array = []; /* arreglo vacio */
+const arr = [otro[],"Angel", true, null, 123, , "el anterior es un espacio vacio, cosa que nunca se hace"];
+```
+
+Acceder a la informacion del arreglo.
+
+Del arreglo devuelvame el valor en la posicion[i]
+
+```js
+var arreglo = [1, 2, 3, 4, 5];
+console.log(array[0]);
+```
+
+### Asignando valores al array
+
+Cambiarle valores al array
+
+```js
+var arreglo = [1, 2, 3, 4, 5];
+array[0] = "otro numero"
+console.log(array[0]); //otro numero
+```
+
+### Propiedades del array
+
+length es una propiedad, funcionalidades como push, shift, unshift
+
+push agrega informacion al final del arreglo
+
+```js
+var arreglo = [1, 2, 3, 4, 5];
+var lista = ["Angel","Didier","Serrato","Arias"];
+console.log(array.length);
+console.log(array[array.length - 1]); //acceder al ultimo elemento del array
+arreglo.push(6);
+arreglo.push(lista);
+arreglo.push(["Angel","Didier","Serrato","Arias"]); //se le puede hacer push de otro arreglo tambien
+console.log(arreglo[6][0]); //se puede acceder al arreglo que esta dentro ddel arreglo y mostrar la posicion cero en este caso
+```
+
+pop extrae el ultimo dato del arreglo y lo elimina
+
+se puede guardar ese dato extraido en una variable si se quiere
+
+```js
+var arreglo = [1, 2, 3, 4, 5];
+arreglo.pop;
+var item = arreglo.pop;
+console.log(arreglo); 
+```
+
+unshift agrega al inicio del arreglo
+
+```js
+var arreglo = [1, 2, 3, 4, 5];
+arreglo.unshift(6);
+console.log(arreglo); 
+```
+
+shift saca el primer dato de un arreglo
+
+```js
+var arreglo = [1, 2, 3, 4, 5];
+arreglo.shift();
+console.log(arreglo); 
+```
+
+### Recorrer el arreglo
+
+el tamaño del arreglo va hasta **array.lenght - 1**
+
+```js
+var arreglo = [1, 2, 3, 4, 5];
+for (let i = 0; i < arreglo.lenght; i++) {
+  console.log(i);
+}
+
+```
+
+
+===
+
 ```js
 
 ```
 
 ```diff
-function saludar(){
 +    //content
 -    //content2
-}
 ```
