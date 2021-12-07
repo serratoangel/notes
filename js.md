@@ -283,6 +283,123 @@ function otra() {
 }
 ```
 
+# Intro to CS
+
+## December 6 2021 Intro to CS
+
+Tabla de la verdad
+
+true = 1
+false = 0
+
+A   B   And   Or
+0   0   0     0   
+0   1   0     1
+1   0   0     1
+1   1   1     1
+
+sistema decimal en base 10 porque tiene 10 simbolos
+sistema binario en base 2
+sistema hexadecimal en base 16 porque tiene 16 simbolos
+0 1 2 3 4 5 6 7 8 9 a b c d e f
+
+8 bits es un bite
+
+## December 7 2021 Lecture Intro to CS
+
+```js
+function BinarioADecimal(num){
+  // digito por la base elevada a la posicion(esta va de atras para adelante)
+  // digito * base ^ posicion
+  // recorrer de atras hacia adelante
+  // se recorre con un for con string.length - 1
+  // 0 * 2**0 + 1 * 2**1 + 1 * 2**2 
+  // i = 2
+  // "1 1 0"
+  // posicion = 0
+  var resultado = 0;
+  var posicion = 0;
+  for(let i = num.length-1; i >= 0; i--){
+    resultado = resultado + num[i] * 2 ** posicion;
+    posicion++;
+  }
+  return resultado;
+}
+
+function decimalAbinario(num){
+  // se debe usar modulo para sacar el resto
+  // 11 % 2 
+  // se toman los restos y se leen de abajo hacia arriba
+  var resultado = "";
+  // mientras que numero sea diferente de cero
+  while(num !== 0){
+    // con este lo pega al principio del string
+    resultado = num % 2 + resultado;
+    num = Math.floor(num/2);
+  }
+  return resultado;
+}
+```
+
+# JavaScript I
+
+## December 7 2021
+
+javascript se ejecuta en un solo proceso en un solo hilo y ademas es sincronico esto quiere decir que va leyendo linea por linea
+
+### syntax parser
+
+detecta si hay o no errores 
+
+### lexical environment
+
+### execution context
+
+contexto de ejecucion global contiene informacion sobre que codigo se esta ejecutando
+
+contexto de ejecucion puede accer al outer environment pero no al inner environment
+
+el contexto de ejecucion se crea cuando la funcion se ejecuta, cuando se termina de ejecutar su contexto se destruye
+
+scope es el alcance que tiene la variable dentro del contexto de ejecucion
+
+hoisting significa levantar o alzar, sube la declaracion de las variables y sube la definicion de la funcion
+
+### execution stack
+
+la pila de ejecucion que se crea cuando se ejecuta un archivo javascript
+
+### operadores
+
+infix expression es la forma mas facil de escribir
+prefix expression
+postfix expression
+
+### precedencia de operadores
+
+suma resta multiplicacion division
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+
+## pasar por referencia o por valor / reference or value
+
+objeto o arreglo se pasa por referencia porque son direcciones en memoria
+
+pasar por valor pasa una copia 
+
+## This
+
+this en el browser trae el objeto global window
+
+
+
+
+
+
+
+
+
+
+
 ```js
 
 ```
