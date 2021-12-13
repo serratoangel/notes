@@ -146,7 +146,7 @@ var elvalordesumaes = suma(1, 2);
 console.log("la variable suma es :", elvalordesumaes);
 ```
 
-## Control de flujo
+### Control de flujo
 
 Dentro del parentesis debe retornar un valor booleano
 
@@ -164,11 +164,11 @@ console.log(persona);
 
 ---
 
-## Javascript II
+## Javascript II / October 21 2021
 
 ---
 
-## Veracidad
+### Veracidad
 
 Dentro de node
 
@@ -198,11 +198,11 @@ false > 2 false
 2 === 2 true
 ```
 
-Operadores logicos && || NOT
+### Operadores logicos && || NOT
 
 |COSO|COSO2| ACA DEBE IR LA TABLA
 
-## For
+### For
 
 DRY Don't Repeat Yourself
 
@@ -229,7 +229,7 @@ function num() {
 }
 ```
 
-## While
+### While
 
 Mientras se cumpla x condicion haga tal cosa
 
@@ -249,7 +249,7 @@ function funcion() {
 funcion();
 ```
 
-## Switch case
+### Switch case
 
 Son if else encadenados, se usa para palabras
 
@@ -267,7 +267,7 @@ function caso(saludo) {
 caso("en");
 ```
 
-## Do while
+### Do while
 
 Loops are used to repeat a block of code until a specified condition is met.
 
@@ -283,10 +283,22 @@ function otra() {
 }
 ```
 
+---
+
+## Javascript I / October 20 2021
+
+---
+
+
+
 <<<<<<< HEAD
 # Intro to CS
 
-## December 6 2021 Intro to CS
+---
+
+### December 6 2021 Intro to CS
+
+---
 
 Tabla de la verdad
 
@@ -306,7 +318,7 @@ sistema hexadecimal en base 16 porque tiene 16 simbolos
 
 8 bits es un bite
 
-## December 7 2021 Lecture Intro to CS
+### December 7 2021 Lecture Intro to CS
 
 ```js
 function BinarioADecimal(num){
