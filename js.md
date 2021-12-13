@@ -508,9 +508,28 @@ for (let i = 0; i < arreglo.lenght; i++) {
 ===
 >>>>>>> c4d524c6eb73f79cb80d879aa41a13a22d5212db
 
-```js
+---
+# Javascript
+---
 
+### December 13 2021
+
+```js
+function nFactorial(n) {
+  if(n===0 || n===1) return 1
+  if(n % 1 != 0) return "el numero debe ser entero"
+  if(n < 0) return "no existen factoriales de numero negativos"
+  return n * nFactorial(n-1)
+}
 ```
+
+```js
+function Queue(){
+  this.arr = [];
+}
+var miLista = new Queue()
+```
+
 
 ```diff
 +    //content
