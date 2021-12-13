@@ -2,11 +2,11 @@
 
 ---
 
-## Javascript I
+## Javascript I / October 20 2021
 
 ---
 
-## Declarar variables
+### Declarar variables
 
 Guardar informacion para luego acceder a ella
 
@@ -28,7 +28,7 @@ let apellido_alumno = "serrato";
 const edad = 34;
 ```
 
-## Node
+### Node
 
 Para ejecutar en consola el archivo javascript
 
@@ -38,7 +38,7 @@ node demo.js
 > console.log(nombre, apellido);
 > console.log(nombre + apellido);
 
-## Cosas extrañas
+### Cosas extrañas
 
 ```js
 [] array vacío
@@ -46,12 +46,12 @@ node demo.js
 0 == "0" true
 0 == [] true
 "0" == [] false
-2 + 2 4
-2 + "2" 22
-2 + "a" 2a
+2 + 2  ==> 4
+2 + "2" ==> 22
+2 + "a" ==> 2a
 ```
 
-## Tipos de datos
+### Tipos de datos
 
 ```js
 string;
@@ -61,7 +61,7 @@ null; // no tiene un valor
 undefined;
 ```
 
-## Operaciones
+### Operaciones
 
 suma
 resta
@@ -69,7 +69,7 @@ multiplicacion
 division
 modulo
 
-## Funciones
+### Funciones
 
 Bloque de codigo que realiza alguna funcion
 
@@ -106,7 +106,7 @@ funcionTres = function () {
 funcionTres(); // asi se llama la funcion o se ejecuta
 ```
 
-## Funcion Flecha
+### Funcion Flecha
 
 ```js
 const arrowFunction = () => {
@@ -114,7 +114,7 @@ const arrowFunction = () => {
 };
 ```
 
-## Argumentos en las funciones
+### Argumentos en las funciones
 
 Los argumentos deben ser enviados en el mismo orden que los recibe la funcion
 
@@ -129,7 +129,7 @@ function argumentosTest(argumentoNombre, apellido) {
 argumentosTest("Angel", "Serrato");
 ```
 
-## Funciones return
+### Funciones return
 
 console.log muestra en consola
 return retorna algo y eso significa que debe estar al final porque corta la ejecucion del codigo
