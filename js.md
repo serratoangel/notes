@@ -1,7 +1,5 @@
 # JavaScript Notes
 
----
-
 ## Javascript I / October 20 2021
 
 ---
@@ -20,6 +18,7 @@ Guardar informacion para luego acceder a ella
 ### Nombres de variables
 
 cammelcase nombreDeUnaVariable
+
 nombre_de_una_variable
 
 ```js
@@ -35,7 +34,9 @@ Para ejecutar en consola el archivo javascript
 node demo.js
 
 > para mostrar en consola es con console.log
+>
 > console.log(nombre, apellido);
+>
 > console.log(nombre + apellido);
 
 ### Cosas extrañas
@@ -285,13 +286,107 @@ function otra() {
 
 ---
 
-## Javascript I / October 20 2021
+## Javascript III / October 25 2021
 
 ---
 
+los arreglos ayudan a listar ciertos elementos como se haria con un archivador, en cada cajon se puede guardar cualquier tipo de dato o se puede guardar otro archivador dentro del mismo
+
+asi se puede organizar informacion
+
+```js
+var arreglo = []; // asi se declara un arreglo
+var objeto = {}; // asi se declara un objeto
+var arregloDos = [1,2,"3",5,"maria",8,9,11,true,null,[a,b,c]]
+console.log(arregloDos[0]); // los arreglos comienzan desde la posicion cero
+
+arregloDos[0] = "aca puedo cambiar el valor en esa posicion del arreglo"
+
+console.log(arregloDos.length); // el .length va a comenzar desde uno y no desde cero
+
+arregloDos.length - 1; // accede a la ultima posicion del arreglo
+```
+
+### Math en los arreglos
+
+#### array.length
+
+se sabe el tamaño del arreglo
+
+#### push
+
+push sirve para agregar al final del arreglo
+
+```js
+var array = [1,2,3,4,5];
+array.push(6);
+array.push(7,8,9,10);
+console.log(array);
+console.log(array[4][1]); // para acceder a dos posiciones del arreglo
+console.log(array[5][4][1]) // acceder al arreglo que tiene un arreglo dentro de un arreglo
+```
+
+#### pop
+
+extrae el ultimo dato del arreglo y lo elimina
+
+para poder guardar este dato se puede asignar a una variable
+
+```js
+var array = [1,2,3,4,5]
+array.pop();
+
+var item = array.pop(); // para guardar el dato en una variable
+```
+
+#### unshift
+
+agrega un valor al inicio del arreglo
+
+```js
+array.unshift("dato");
+```
+
+#### shift
+
+saca el primer dato del arreglo
+
+```js
+array.shift();
+var itemDos = array.shift();
+```
+
+### recorrer un arreglo
+
+para recorrer un arreglo se puede utilizar un ciclo for
+
+```js
+var arreglo = [1,2,3];
+for(let i = 0; i < arreglo.length; i++){
+  array[i] = "palabra" + i;
+  console.log(array[i]);
+}
+```
+
+#### typeof
+
+sirve para conocer que tipo de dato es
+
+```js
+function mostrar(algo){
+  if(typeof algo === boolean{ // puede ser boolean number string symbol undefined object
+    console.log("es booleano");
+  };
+}
+```
 
 
-<<<<<<< HEAD
+
+
+
+
+
+
 # Intro to CS
 
 ---
