@@ -486,7 +486,7 @@ puedo definir una funcion por aparte y los objetos la usan por dentro, para reut
 
 ```js
 function saludarPersona(){
-  console.log(this.nombre);
+  console.log(this.nombre); // el this apunta a la propiedad nombre dentro del objeto persona1 y persona2
 }
 var persona1 = {
   nombre: "angel",
@@ -496,6 +496,8 @@ var persona2 = {
   nombre: "luis",
   saludar: saludarPersona
 }
+persona1.saludar();
+persona2.saludar();
 ```
 
 #### acceder a los valores de las propiedades
