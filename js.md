@@ -311,7 +311,7 @@ arregloDos.length - 1; // accede a la ultima posicion del arreglo
 
 #### array.length
 
-se sabe el tamaño del arreglo
+se sabe el tamaño del arreglo y comienza contando desde uno
 
 #### push
 
@@ -379,6 +379,184 @@ function mostrar(algo){
   };
 }
 ```
+---
+## JavaScript IV / October 26 2021
+---
+
+### Objetos
+
+en js todo son objetos, es una coleccion de propiedades asociadas a un valor
+
+```js
+var objeto = {};
+var persona = {
+  nombre: "angel", // nombre propiedad: valor propiedad
+  apellido: "serrato",
+  edad: 34,
+  saludar: function(){
+    console.log("hola angel");
+  }
+  hobbies: [caminar, correr],
+}
+var array = [1,2,3]
+array[0]; // acceder al valor del array en la posicion cero
+```
+
+#### bracket notation
+
+```js
+// aca se utiliza la bracket notation cuando yo no conozco el nombre de la propiedad
+persona["nombre"]; // acceder al valor del propiedad nombre dentro del objeto persona, se debe colocar entre comillas el nombre de la propiedad
+// si la propiedad no existe el resultado sera undefined
+// con string
+```
+
+#### dot notation
+
+```js
+// aca se utiliza dot notation cuando conozco el nombre de la propiedad
+persona.nombre; // para acceder al valor de la propiedad nombre
+// con la palabra de la propiedad que estoy buscando
+```
+
+#### Object.keys
+
+asi obtengo las propiedades del objeto por ejemplo persona
+
+```js
+console.log(Object.keys(persona));
+```
+
+si la propiedad no existe dentro del objeto js la crea y la agrega al final
+
+```js
+persona.pasaporte = "col12345";
+```
+
+#### buscando propiedades cuando no sabemos el nombre de las mismas
+
+buscar la propiedad del valor con el cual esta la palabra
+
+```js
+persona.nombre // cuando conozco el nombre de la propiedad
+persona["propiedad"] // cuando no conozco el nombre de la propiedad
+```
+
+#### for in 
+
+es un for para recorrer objetos
+
+```js
+for(let propiedad in persona){
+  // me muestra el nombre de la propiedad y el valor de la propiedad
+  console.log(propiedad);
+  console.log(persona[propiedad]);
+}
+```
+
+#### invocar una funcion que esta dentro de un objeto
+
+se le llama metodo a la funcion que esta dentro del objeto y se debe colocar saludar() sino se colocan los corchetes js devuelve la definicion del metodo
+
+```js
+console.log( persona.saludar() ); // con dot notation
+console.log( persona[saludar]() ); // con bracket notation
+```
+
+#### keyword this
+
+cuando yo quiero acceder desde un metodo del propio objeto a alguna de las propiedades que contiene el objeto puedo utilizar la palabra this para hacer referencia al propio objeto(asi mismo)
+
+```js
+var persona1 = {
+  nombre: "angel",
+  saludo: function (){
+    console.log("hola angel");
+  }
+}
+var persona2 = {
+  nombre: "luis",
+  saludo: function (){
+    console.log("hola " + this.nombre);
+  }
+}
+```
+
+puedo definir una funcion por aparte y los objetos la usan por dentro, para reutilizar esa funcion
+
+```js
+function saludarPersona(){
+  console.log(this.nombre);
+}
+var persona1 = {
+  nombre: "angel",
+  saludar: saludarPersona
+}
+var persona2 = {
+  nombre: "luis",
+  saludar: saludarPersona
+}
+```
+
+#### acceder a los valores de las propiedades
+
+```js
+var alumnos = {
+  {
+    nombre: "angel",
+    edad: 34,
+    hobbies: [correr, caminar, nadar],
+    amigos: [
+      {
+        nombre: "brian",
+        familia: [{ nombre: "vargas"}]
+      }
+      {
+        nombre: "carlos",
+        familia: [{ nombre: "cardenas"}]
+
+      }
+    ]
+  }
+  {
+    nombre: "david",
+    edad: 30,
+    hobbies: [correr, caminar, nadar],
+    amigos: [
+      {
+        nombre: "miguel",
+        familia: [{ nombre: "vargas"}]
+      }
+      {
+        nombre: "antonio",
+        familia: [{ nombre: "cardenas"}]
+
+      }
+    ]
+  }
+}
+// para acceder al dato familia
+console.log(alumnos[1].amigos[0].familia[0].nombre) // vargas
+console.log(alumnos[1]["amigos"][0].familia[0].nombre) // vargas
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
