@@ -780,41 +780,24 @@ reduce esta enfocado a valores, numeros
 
 reduce retorna o devuelve algo y es un metodo de un arreglo que recibe una funcion de callback
 
-el metodo recibe dos argumentos el primero un acumulador y el item
+el metodo recibe dos argumentos el primero un acumulador y el iterador o item
 
 el metodo reduce los valores a un solo valor que sera guardado en el acumulador
 
 ```js
 var edades = [10,11,12,13,14];
+// guardo el valor del reduce en una variable resultadoReduce para luego mostrarla en consola
+var resultadoReduce = edades.reduce( function(acumulador, item, i){
+  acumulador = acumulador + item;
+  return acumulador;
+})
 
+console.log(resultadoReduce)
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+---
+## fin prepcourse 
+---
 
 # Intro to CS
 
@@ -926,11 +909,6 @@ pasar por valor pasa una copia
 ## This
 
 this en el browser trae el objeto global window
-
-
-
-
-
 
 
 
