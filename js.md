@@ -683,6 +683,112 @@ class EstudianteGraduado extends EstudianteHenryClass{
 let estudianteGraduado1 = new EstudianteGraduado("angel","serrato")
 ```
 
+---
+## JavaScript VI / October 27 2021
+---
+
+## Callbacks
+
+las funciones se pueden pasar como argumentos a otras funciones, retornarlas como resultado de una funcion y guardarlas en variables u otras estructuras de datos
+
+una funcion que le puedo pasar como argumento a otra, pero no paso la funcion invocandola
+
+```js
+function saludar(usuario){
+  return "hola " + usuario;
+}
+function despedir(usuario){
+  return "adios " + usuario;
+}
+
+function crearSaludo(usuario, callback){
+  // la funcion de callback se recibe y se ejecuta dentro de esta funcion
+  return callback(usuario);
+}
+
+// le envio la funcion saludar como argumento a la funcion crearSaludo
+console.log(crearSaludo("angel", saludar));
+console.log(crearSaludo("angel", despedir));
+// se debe pasar la definicion de la funcion es decir despedir o saludar
+// no se pasar el resultado de la funcion es decir despedir() o saludar()
+```
+
+cuando se crea una funcion si la funcion no retorna nada en consola saldra undefined al final 
+
+## arreglos con callback
+
+todos los metodos de arreglos recorren uno a uno los arreglos
+
+### forEach
+
+forEach es un metodo de arreglos que recibe como argumento una funcion de callback
+
+el foreach no retorna nada 
+
+```js
+var alumnos = ["carlos","ana","maria","juan","pedro","paola","diana"];
+
+// recorrer el arreglo para mostrar los alumnos en consola con un ciclo for
+for (let i = 0; i < alumnos.length; i++) {
+  console.log(alumnos[i]);
+}
+
+// haciendo lo mismo pero con el metodo foreach recibiendo como argumento una funcion de callback que nosotros mismos creamos
+function mostrarAlumno(alumno){
+  console.log(alumno);
+}
+
+// se le pasa como argumento la funcion mostrarAlumno y esta los muestra en consola recorriendo el arreglo con el metodo foreach
+alumnos.forEach(mostrarAlumno);
+```
+
+la diferencia entre el for y el foreach con el ciclo for se puede cortar la ejecucion cuando se cumpla una condicion 
+
+con el foreach no se corta la ejecucion de la funcion
+
+no funciona con return ni con un break porque no reconoce la funcion como un bucle
+
+### map
+
+el map tambien recorre por cada uno los elementos del arreglo
+
+el map si puede retornar algo y lo pushea a un nuevo arreglo 
+
+el resultado del map es un arreglo que se guarda en una variable para luego ser mostrado en consola
+
+```js
+var alumnos = ["carlos","ana","maria","juan","pedro","paola","diana"];
+
+// haciendo lo mismo pero con el metodo foreach recibiendo como argumento una funcion de callback que nosotros mismos creamos
+function mostrarAlumno(alumno){
+  console.log(alumno);
+}
+
+// aca se guarda el resultado del metodo map en la variable resultado
+// se debe crear la variable para que se guarde el resultado que retorna el metodo map
+var resultadoMap = alumnos.map( function(alumno, i){
+  // puedo enviar el indice como argumento dentro de la funcion 
+  return "hola desde map " + alumno + i;
+});
+
+console.log(resultadoMap);
+```
+
+### reduce
+
+reduce esta enfocado a valores, numeros
+
+reduce retorna o devuelve algo y es un metodo de un arreglo que recibe una funcion de callback
+
+el metodo recibe dos argumentos el primero un acumulador y el item
+
+el metodo reduce los valores a un solo valor que sera guardado en el acumulador
+
+```js
+var edades = [10,11,12,13,14];
+
+```
+
 
 
 
