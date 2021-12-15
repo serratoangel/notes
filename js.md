@@ -542,6 +542,149 @@ console.log(alumnos[1].amigos[0].familia[0].nombre) // vargas
 console.log(alumnos[1]["amigos"][0].familia[0].nombre) // vargas
 ```
 
+---
+## JavaScript V / October 26 2021
+---
+
+### clases
+
+una clase es una plantilla para la creacion de varios objetos 
+
+los nombres de las clases comienzan con mayuscula
+
+la funcion no retorna nada
+
+```js
+// esta es la plantilla
+function EstudianteHenry(nombre, apellido){
+  this.firstname = nombre
+  this.lastname = apellido
+  this.esEstudiante = true
+  this.materias = [html, css, git , github]
+}
+
+// con new se instancia un nuevo estudiante a partir de la funcion de clase
+let estudiante1 = new EstudianteHenry("angel", "serrato");
+let estudiante2 = new EstudianteHenry("angel", "cardenas");
+let estudiante3 = new EstudianteHenry("angel", "vargas");
+
+estudiante3.esEstudiante = false;
+
+console.log(estudiante3);
+```
+
+### default operator
+
+```js
+function EstudianteHenry(nombre, apellido){
+  // el default operator permite enviar mensaje de error
+  this.firstname = nombre || "nombre no enviado"
+  this.lastname = apellido || "apellido no enviado"
+  this.esEstudiante = true
+  this.materias = [html, css, git , github]
+}
+```
+
+### prototype
+
+todos los objetos tienen una referencia a otro objeto llamado proto
+
+el puede buscar una propiedad y sino la encuentra el busca a partir del prototipo
+
+el proto es el objeto padre de todos todos 
+
+cuando tienen guion bajo al principio significa que el desarrollador no quiere que toquen esa propiedad
+
+```js
+// este es el constructor o la funcion de clase
+function EstudianteHenry(nombre, apellido){
+  this.firstname = nombre
+  this.lastname = apellido
+  this.esEstudiante = true
+  this.materias = [html, css, git , github]
+}
+
+EstudianteHenry.prototype.presentarHC = function(){
+  return console.log("el estudiante " + this.firstname + " presento el HC")
+}
+
+EstudianteHenry.prototype.saludar = function(idioma){
+  if(idioma === "en"){
+    console.log("hey there " + this.firstname);
+  } else {
+    console.log("hola " + this.firstname);
+  }
+}
+
+EstudianteHenry.prototype.despedir = function(idioma){
+  if(idioma === "en"){
+    console.log("bye " + this.firstname);
+  } else {
+    console.log("adios " + this.firstname);
+  }
+}
+
+let estudiante1 = new EstudianteHenry("angel", "serrato");
+
+estudiante1.presentarHC(); // el estudiante angel serrato presento el hc
+estudiante1.saludar("en"); // hey there angel
+estudiante.despedir(); // retorna adios angel
+```
+
+### es6 ecmascript 6 y clases
+
+```js
+// otra forma de escribir lo mismo de arriba
+class EstudianteHenryClass {
+  constructor(nombre, apellido){
+    this.firstname = nombre
+    this.lastname = apellido
+    this.esEstudiante = true
+    this.materias = [html, css, git , github]
+  }
+  
+  saludar(){
+    if(idioma === "en"){
+      console.log("hey there " + this.firstname);
+    } else {
+      console.log("hola " + this.firstname);
+    }
+  }
+
+  despedir(){
+    if(idioma === "en"){
+      console.log("bye " + this.firstname);
+    } else {
+      console.log("adios " + this.firstname);
+    }
+  }
+}
+
+let estudiante1Class = new EstudianteHenryClass("angel","serrato");
+
+console.log(estudiante1Class);
+
+estudiante1Class.saludar();
+```
+
+### herencia o extends
+
+```js
+// con herencia se hereda por medio del super todo lo que tiene el padre
+class EstudianteGraduado extends EstudianteHenryClass{
+  // se crea una clase que se trae toda la plantilla o la parte que yo quiera de estudiantehenryclass
+  constructor(nombre, apellido){
+    // super va al padre y siempre tiene que ir cuando se usa extends
+    super(nombre, apellido)
+    this.esGraduado = true;
+  }
+}
+
+let estudianteGraduado1 = new EstudianteGraduado("angel","serrato")
+```
+
+
+
 
 
 
