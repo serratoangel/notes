@@ -825,41 +825,6 @@ sistema hexadecimal en base 16 porque tiene 16 simbolos
 
 8 bits es un bite
 
-### December 7 2021 Lecture Intro to CS
-
-```js
-function BinarioADecimal(num){
-  // digito por la base elevada a la posicion(esta va de atras para adelante)
-  // digito * base ^ posicion
-  // recorrer de atras hacia adelante
-  // se recorre con un for con string.length - 1
-  // 0 * 2**0 + 1 * 2**1 + 1 * 2**2 
-  // i = 2
-  // "1 1 0"
-  // posicion = 0
-  var resultado = 0;
-  var posicion = 0;
-  for(let i = num.length-1; i >= 0; i--){
-    resultado = resultado + num[i] * 2 ** posicion;
-    posicion++;
-  }
-  return resultado;
-}
-
-function decimalAbinario(num){
-  // se debe usar modulo para sacar el resto
-  // 11 % 2 
-  // se toman los restos y se leen de abajo hacia arriba
-  var resultado = "";
-  // mientras que numero sea diferente de cero
-  while(num !== 0){
-    // con este lo pega al principio del string
-    resultado = num % 2 + resultado;
-    num = Math.floor(num/2);
-  }
-  return resultado;
-}
-```
 
 # JavaScript I
 
@@ -909,6 +874,45 @@ pasar por valor pasa una copia
 ## This
 
 this en el browser trae el objeto global window
+
+
+
+### December 7 2021 Lecture Intro to CS
+
+```js
+function BinarioADecimal(num){
+  // digito por la base elevada a la posicion(esta va de atras para adelante)
+  // digito * base ^ posicion
+  // recorrer de atras hacia adelante
+  // se recorre con un for con string.length - 1
+  // 0 * 2**0 + 1 * 2**1 + 1 * 2**2 
+  // i = 2
+  // "1 1 0"
+  // posicion = 0
+  var resultado = 0;
+  var posicion = 0;
+  for(let i = num.length-1; i >= 0; i--){
+    resultado = resultado + num[i] * 2 ** posicion;
+    posicion++;
+  }
+  return resultado;
+}
+
+function decimalAbinario(num){
+  // se debe usar modulo para sacar el resto
+  // 11 % 2 
+  // se toman los restos y se leen de abajo hacia arriba
+  var resultado = "";
+  // mientras que numero sea diferente de cero
+  while(num !== 0){
+    // con este lo pega al principio del string
+    resultado = num % 2 + resultado;
+    num = Math.floor(num/2);
+  }
+  return resultado;
+}
+```
+
 
 
 
