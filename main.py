@@ -541,8 +541,6 @@ errores por tipo de dato
 
 try y except se usan para capturar errores
 try captura el tipo de error los exception errors
-"""
-
 def validar_x(x):
     if x > 1:
         raise Exception("La variable x debe ser mayor a 1")
@@ -558,3 +556,22 @@ def calcular_promedio(lista):
 
 promedio = calcular_promedio(lista=[1,3,5])
 print(promedio)
+"""
+
+
+"""
+Python: Mejora tu desarrollo
+Julio 13 2022
+
+
+
+"""
+
+
+class Persona():
+    def __init__(self, nombre, nacionalidad):
+        self.nombre = nombre
+        self.nacionalidad = nacionalidad
+    
+persona1 = Persona("Angel", "Colombiano")
+        
