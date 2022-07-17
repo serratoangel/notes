@@ -52,7 +52,7 @@ Loops and functions
     simple function
 */
 
-function test(a, b = 3, c = 42){
+function test(a, b = 3, c = 42) {
     return a + b + c;
 }
 //console.log(test(5)); //50
@@ -63,11 +63,11 @@ var test = (a, b = 3, c = 42) => {
 }
 //console.log(test(5)); //50
 
-var scores = [68,95,54,84,77,75,63,74,69,80,71,63] // 7
+var scores = [68, 95, 54, 84, 77, 75, 63, 74, 69, 80, 71, 63] // 7
 var contador = 0;
 var contador2 = 0;
 for (let i = 0; i < scores.length; i++) {
-    if (scores[i] > 70){
+    if (scores[i] > 70) {
         contador = contador + 1;
     }
 }
@@ -75,7 +75,7 @@ for (let i = 0; i < scores.length; i++) {
 
 var count = 0;
 for (const iterator of scores) {
-    if(iterator>=70){
+    if (iterator >= 70) {
         count++;
     }
 }
@@ -138,7 +138,7 @@ let persona = {
     nombre: "angel",
     edad: 34
 };
-let nuevapersona = Object.assign({}, persona, {nombre:"Carlos"});
+let nuevapersona = Object.assign({}, persona, { nombre: "Carlos" });
 // console.log(nuevapersona);
 
 const obj1 = {
@@ -146,14 +146,14 @@ const obj1 = {
     a: 0,
     b: 2,
     c: 4
-  };
-const obj2 = Object.assign({c: 5, d: 6}, obj1);
+};
+const obj2 = Object.assign({ c: 5, d: 6 }, obj1);
 // console.log(obj2.c, obj2.d);
 /*
 Array Destructuring in ES6
 you can unpack values from arrays or properties from objects
 */
-let arra = ["1","2","3"];
+let arra = ["1", "2", "3"];
 let [one, two, three] = arra;
 
 // console.log(one);
@@ -164,8 +164,8 @@ let [one, two, three] = arra;
 Object Destructuring in ES6
 you can unpack values from arrays or properties from objects
 */
-let obj = {h:100, s:true};
-let {h, s} = obj;
+let obj = { h: 100, s: true };
+let { h, s } = obj;
 
 // console.log(h);
 // console.log(s);
@@ -186,8 +186,8 @@ Spread in array literals
 */
 var arr = ["one", "two", "five"];
 
-arr.splice(2, 0 ,"three");
-arr.splice(3, 0 ,"four");
+arr.splice(2, 0, "three");
+arr.splice(3, 0, "four");
 console.log(arr);
 
 let newarr = ["three", "four"];
@@ -199,7 +199,7 @@ a class contains a constructor method for initializing
 the constructor is a especial method which is used for creating and initializing an object created with a class
 */
 class rectangle {
-    constructor(height, width){
+    constructor(height, width) {
         this.height = height;
         this.width = width;
     }
@@ -210,7 +210,7 @@ const poster = new rectangle(2, 3);
 
 //se puede definir una clase con una expresion de clase
 var Square = class rectangle {
-    constructor(height, width){
+    constructor(height, width) {
         this.height = height;
         this.width = width;
     }
@@ -218,7 +218,7 @@ var Square = class rectangle {
 
 //una variable asignada a la definicion de una clase
 var Square = class {
-    constructor(height, width){
+    constructor(height, width) {
         this.height = height;
         this.width = width;
     }
@@ -273,20 +273,21 @@ values() Returns an Iterator of values in the set.
 /* 
 Promises 
 */
-new Promise(function(resolve, reject)){
-    if (success){
-        resolve(result;
-    } else {
-        reject(Error("failure"));
-    }
-}
+// new Promise(function(resolve, reject)) {
+//     if (success){
+//         resolve(result);
+//     } else {
+//         reject(Error("failure"));
+//     }
+// }
 
 /*
 Iterators & Generators
 */
-let myIterableObj = {
-    [Symbol.iterator] : function* () {
-        yield 1;yield 2; yield 3;
+
+var myIterableObj = {
+    [Symbol.iterator]: function* () {
+        yield 1; yield 2; yield 3;
     }
 }
 console.log([...myIterableObj]);
@@ -296,8 +297,8 @@ Modules
 */
 
 // lib/math.js
-export ​let sum = (x, y) => { return x + y; }
-export ​let pi = 3.14
+export let sum = (x, y) => { return x + y; }
+export let pi = 3.14
 
 // app.js
 import * ​as math from "lib/mat"
